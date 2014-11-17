@@ -6,13 +6,16 @@ A emulator for fly for fun with some tools, based form spheron rev 6 .
 Language Used
 -------------
 
-Black-Orion - C++
+* C++
+ * Black-Orion 
 
-Loader Black-orion - C#
+* C#
+ * Loader Black-orion 
+ * Ultime Black Orion 
+ * Tools MJ
 
-Ultime Black Orion - C#
-
-Tools MJ - C#
+* HTML/CSS
+ * ChangeLog
 
 Pre-Request
 -----------
