@@ -1,0 +1,29 @@
+NAME "MaDa_Almani"
+MOVER 228
+
+POS 3846.71 59 4443.02
+WORLD 1
+ROTATION 1800
+SIZE 100
+
+PAGE 0
+	5000
+	5001
+	5002
+	5003
+END
+
+PAGE 1
+	5101
+	5102
+	5103
+	5104
+END
+
+PAGE 2
+	5902
+END
+
+TEXT 20 "Fluganleitungen gibt es
+hier, bei der Station von
+Almani!"

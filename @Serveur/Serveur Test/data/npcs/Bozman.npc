@@ -1,0 +1,76 @@
+NAME "MaSa_Bozman"
+MOVER 211
+
+POS 8375.1 100 3673.2
+WORLD 1
+ROTATION 0
+SIZE 100
+
+PAGE 0
+	534
+	564
+	535
+	565
+	1465
+	1495
+	1165
+	1195
+	835
+	865
+	536
+	836
+	1466
+	1496
+	1166
+	1196
+	836
+	866
+END
+
+PAGE 1
+	984
+	1014
+	655
+	685
+	1585
+	1615
+	1285
+	1315
+	985
+	1015
+	686
+	656
+	1616
+	1586
+	1316
+	1286
+	2021
+	986
+END
+
+PAGE 2
+	891
+	921
+	593
+	623
+	1523
+	1553
+	1223
+	1253
+	893
+	923
+	625
+	595
+	1555
+	1525
+	1255
+	1225
+	925
+	895
+END
+
+TEXT 20 "Schilde besitzen Stärke
+und Schönheit. Sie
+können im Schildladen
+von Bozman gefunden
+werden!"

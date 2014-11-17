@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/14/trunk/libs/angelscript/add_on/scriptstring
+END
+scriptstring.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/14/trunk/libs/angelscript/add_on/scriptstring/scriptstring.h
+END
+scriptstring.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/14/trunk/libs/angelscript/add_on/scriptstring/scriptstring.cpp
+END
+scriptstring_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/14/trunk/libs/angelscript/add_on/scriptstring/scriptstring_utils.cpp
+END

@@ -1,0 +1,11 @@
+NAME "MaFL_Andy"
+MOVER 218
+
+POS 6929.96 100.3 3328.84
+WORLD 1
+ROTATION 190
+SIZE 100
+
+DIALOG "MaFL_Andy.as"
+
+TEXT 20 "Tu es perdu? Je suis le maitre des mercenaires, je pourrais te guider dans ton voyage!"

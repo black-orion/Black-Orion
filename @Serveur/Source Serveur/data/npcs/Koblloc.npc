@@ -1,0 +1,75 @@
+NAME "MaDa_Kablloc"
+MOVER 222
+
+POS 3239.98 11.6511 3417.7
+WORLD 1
+ROTATION 540
+SIZE 100
+
+PAGE 0
+	128
+	137
+	129
+	138
+	130
+	139
+	131
+	140
+	132
+	141
+	59
+	115
+	133
+	142
+	63
+	117
+END
+
+PAGE 1
+	203
+	353
+	205
+	355
+	207
+	357
+	209
+	359
+	211
+	361
+	213
+	363
+END
+
+PAGE 2
+	253
+	303
+	255
+	305
+	257
+	307
+	259
+	309
+	261
+	311
+	263
+	213
+END
+
+PAGE 3
+	403
+	453
+	405
+	455
+	407
+	457
+	409
+	459
+	411
+	461
+	413
+	463
+END
+TEXT 20 "Willkommen im Koblloc
+Waffen Laden! Hier gibt
+es die besten Waffen von
+Nomaden."

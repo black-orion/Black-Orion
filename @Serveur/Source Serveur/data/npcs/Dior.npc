@@ -1,0 +1,30 @@
+NAME "MaFl_Dior"
+MOVER 216
+
+POS 6957.96 100 3238.35
+WORLD 1
+ROTATION 3400
+SIZE 100
+
+PAGE 0
+	5000
+	5001
+	5002
+	5003
+END
+
+PAGE 1
+	5101
+	5102
+	5103
+	5104
+END
+
+PAGE 2
+	5902
+END
+
+DIALOG "MaFl_Dior.as"
+
+TEXT 20 "Besoin d'un conseil pour rejoindre les oiseaux la-haut?
+Ne cherche plus,c'est ici!"

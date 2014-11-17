@@ -1,0 +1,12 @@
+NAME "MaSa_Parine"
+MOVER 221
+
+POS 8414.34 140.141 3974.8
+WORLD 1
+ROTATION 0
+SIZE 100
+
+TEXT 20 "Willkommen an der <Saint
+Morning Station>! Wir
+bieten Informationen und
+Fluginformationen an!"

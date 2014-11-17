@@ -1,0 +1,23 @@
+MOB 580 	//MI_FLYBAT4
+PENYA 224 324
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 7
+ENDSPC
+
+ITEM 3211 0.001250 		 //River Card (0.125000%)
+ITEM 3211 0.002500 		 //River Card (0.250000%)
+ITEM 2035 0.001002 		 //Sunstone (0.100208%)
+ITEM 2036 0.000520 		 //Moonstone (0.052000%)
+ITEM 2995 0.333333 		 //Flyclaw (33.333333%)
+ITEM 2995 0.333333 		 //Flyclaw (33.333333%)
+ITEM 2545 0.036667 		 //VitalDrink 200 (3.666667%)
+ITEM 2533 0.140000 		 //Fourth Refresher (14.000000%)
+ITEM 2802 0.333333 		 //Chocolate Bar (33.333333%)
+ITEM 2802 0.333333 		 //Chocolate Bar (33.333333%)
+ITEM 2802 0.333333 		 //Chocolate Bar (33.333333%)
+ITEM 2818 0.200000 		 //Pineapple Cone (20.000000%)
+ITEM 2818 0.200000 		 //Pineapple Cone (20.000000%)

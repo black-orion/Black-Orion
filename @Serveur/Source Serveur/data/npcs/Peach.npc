@@ -1,0 +1,17 @@
+NAME "MaFl_Peach"
+MOVER 231
+
+POS 6930.701172 100 3226.047119
+WORLD 1
+ROTATION 3500
+SIZE 100
+
+PAGE 0
+	20024
+	26461
+END
+
+TEXT 20 "Nur Juwelen können dir
+Kraft geben. Komm zu  mir
+und ich werde dir ein
+neues Juwel erstellen."

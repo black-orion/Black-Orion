@@ -1,0 +1,11 @@
+NAME "MaDa_Ride"
+MOVER 12
+
+POS 3788.05 59.1 4481.21
+WORLD 1
+ROTATION 1300
+SIZE 100
+
+TEXT 20 "Roentel, die Saat, die du
+auf der Welt gesät hast,
+wird singend geerntet."

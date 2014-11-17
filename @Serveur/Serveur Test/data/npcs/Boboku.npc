@@ -1,0 +1,44 @@
+NAME "MaFl_Bokoku"
+MOVER 211
+
+POS 6926.1 100 3232.11
+WORLD 1
+ROTATION 900
+SIZE 100
+
+PAGE 0
+	29
+	85
+	31
+	87
+	33
+	89
+	35
+	91
+END
+
+PAGE 1
+	181
+	331
+	183
+	333
+	185
+	335
+	187
+	337
+END
+
+PAGE 2
+	431
+	381
+	433
+	383
+	435
+	385
+	437
+	387
+END
+
+DIALOG "MaFl_Bokoku.as"
+
+TEXT 20 "Venez voir la forge des freres bobo!"

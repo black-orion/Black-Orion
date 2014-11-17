@@ -1,0 +1,11 @@
+NAME "MaFl_Bobochan"
+MOVER 211
+
+POS 6928.26 100 3227.87
+WORLD 1
+ROTATION 1250
+SIZE 100
+
+DIALOG "MaFl_Bobochan.as"
+
+TEXT 20 "C'est en forgent que l'on devient forgeron"

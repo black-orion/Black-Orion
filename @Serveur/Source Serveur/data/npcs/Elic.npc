@@ -1,0 +1,12 @@
+NAME "MaFl_Elic"
+MOVER 226
+
+POS 7155.72 99.9994 3248.06
+WORLD 1
+ROTATION 2900
+SIZE 100
+
+DIALOG "MaFl_Elic.as"
+
+TEXT 20 "Bonjour jeune Gens !
+Envis de devenir acolytes"

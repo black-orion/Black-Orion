@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BlackOrion" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/BlackOrion" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-std=c++0x" />
+					<Add directory="angelscript/include" />
+					<Add directory="angelscript/add_on" />
+				</Compiler>
+				<Linker>
+					<Add library="mysql/libmysqlclient.a" />
+					<Add library="angelscript/lib/libAngelScript.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/BlackOrion" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-std=c++0x" />
+					<Add directory="angelscript/include" />
+					<Add directory="angelscript/add_on" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="mysql/libmysqlclient.a" />
+					<Add library="angelscript/lib/libAngelScript.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Main.cpp" />
+		<Unit filename="Main.h" />
+		<Unit filename="angelscript/add_on/scriptbuilder/scriptbuilder.cpp" />
+		<Unit filename="angelscript/add_on/scriptbuilder/scriptbuilder.h" />
+		<Unit filename="angelscript/add_on/scriptstring/scriptstring.cpp" />
+		<Unit filename="angelscript/add_on/scriptstring/scriptstring.h" />
+		<Unit filename="angelscript/add_on/scriptstring/scriptstring_utils.cpp" />
+		<Unit filename="angelscript/include/angelscript.h" />
+		<Unit filename="char/CharISC.cpp" />
+		<Unit filename="char/CharISC.h" />
+		<Unit filename="char/CharMain.cpp" />
+		<Unit filename="char/CharMain.h" />
+		<Unit filename="char/CharPlayer.cpp" />
+		<Unit filename="char/CharPlayer.h" />
+		<Unit filename="char/CharServer.cpp" />
+		<Unit filename="char/CharServer.h" />
+		<Unit filename="char/CharSettings.cpp" />
+		<Unit filename="char/CharSettings.h" />
+		<Unit filename="core/Args.cpp" />
+		<Unit filename="core/Args.h" />
+		<Unit filename="core/Array.cpp" />
+		<Unit filename="core/Array.h" />
+		<Unit filename="core/ByteArray.cpp" />
+		<Unit filename="core/ByteArray.h" />
+		<Unit filename="core/ConfigReader.cpp" />
+		<Unit filename="core/ConfigReader.h" />
+		<Unit filename="core/Console.cpp" />
+		<Unit filename="core/Console.h" />
+		<Unit filename="core/Core.cpp" />
+		<Unit filename="core/Core.h" />
+		<Unit filename="core/CoreBase.cpp" />
+		<Unit filename="core/CoreBase.h" />
+		<Unit filename="core/CriticalSection.cpp" />
+		<Unit filename="core/CriticalSection.h" />
+		<Unit filename="core/Debug.cpp" />
+		<Unit filename="core/Debug.h" />
+		<Unit filename="core/FileList.cpp" />
+		<Unit filename="core/FileList.h" />
+		<Unit filename="core/FileReader.cpp" />
+		<Unit filename="core/FileReader.h" />
+		<Unit filename="core/Map.cpp" />
+		<Unit filename="core/Map.h" />
+		<Unit filename="core/MemoryLeak.cpp" />
+		<Unit filename="core/MemoryLeak.h" />
+		<Unit filename="core/NetConnection.cpp" />
+		<Unit filename="core/NetConnection.h" />
+		<Unit filename="core/Network.cpp" />
+		<Unit filename="core/Network.h" />
+		<Unit filename="core/Pair.cpp" />
+		<Unit filename="core/Pair.h" />
+		<Unit filename="core/RefCounted.cpp" />
+		<Unit filename="core/RefCounted.h" />
+		<Unit filename="core/RefPtr.cpp" />
+		<Unit filename="core/RefPtr.h" />
+		<Unit filename="core/StaticArray.cpp" />
+		<Unit filename="core/StaticArray.h" />
+		<Unit filename="core/String.cpp" />
+		<Unit filename="core/String.h" />
+		<Unit filename="core/StringReader.cpp" />
+		<Unit filename="core/StringReader.h" />
+		<Unit filename="core/System.cpp" />
+		<Unit filename="core/System.h" />
+		<Unit filename="core/Time.cpp" />
+		<Unit filename="core/Time.h" />
+		<Unit filename="core/Util.cpp" />
+		<Unit filename="core/Util.h" />
+		<Unit filename="core/Vec2D.cpp" />
+		<Unit filename="core/Vec2D.h" />
+		<Unit filename="core/Vec3D.cpp" />
+		<Unit filename="core/Vec3D.h" />
+		<Unit filename="core/Vector.cpp" />
+		<Unit filename="core/Vector.h" />
+		<Unit filename="login/LoginISC.cpp" />
+		<Unit filename="login/LoginISC.h" />
+		<Unit filename="login/LoginMain.cpp" />
+		<Unit filename="login/LoginMain.h" />
+		<Unit filename="login/LoginPlayer.cpp" />
+		<Unit filename="login/LoginPlayer.h" />
+		<Unit filename="login/LoginServer.cpp" />
+		<Unit filename="login/LoginServer.h" />
+		<Unit filename="login/LoginSettings.cpp" />
+		<Unit filename="login/LoginSettings.h" />
+		<Unit filename="shared/Account.cpp" />
+		<Unit filename="shared/Account.h" />
+		<Unit filename="shared/AccountManager.cpp" />
+		<Unit filename="shared/AccountManager.h" />
+		<Unit filename="shared/Base.cpp" />
+		<Unit filename="shared/Base.h" />
+		<Unit filename="shared/Character.cpp" />
+		<Unit filename="shared/Character.h" />
+		<Unit filename="shared/CharacterManager.cpp" />
+		<Unit filename="shared/CharacterManager.h" />
+		<Unit filename="shared/DatabaseConnection.cpp" />
+		<Unit filename="shared/DatabaseConnection.h" />
+		<Unit filename="shared/DatabaseManager.cpp" />
+		<Unit filename="shared/DatabaseManager.h" />
+		<Unit filename="shared/DatabaseObject.cpp" />
+		<Unit filename="shared/DatabaseObject.h" />
+		<Unit filename="shared/E_CHAR.cpp" />
+		<Unit filename="shared/E_CHAR.h" />
+		<Unit filename="shared/E_ELEMENT.cpp" />
+		<Unit filename="shared/E_ELEMENT.h" />
+		<Unit filename="shared/E_GAME_TEXT.cpp" />
+		<Unit filename="shared/E_GAME_TEXT.h" />
+		<Unit filename="shared/E_ISC.cpp" />
+		<Unit filename="shared/E_ISC.h" />
+		<Unit filename="shared/E_STAT.cpp" />
+		<Unit filename="shared/E_STAT.h" />
+		<Unit filename="shared/E_WEATHER.cpp" />
+		<Unit filename="shared/E_WEATHER.h" />
+		<Unit filename="shared/ISCPacketCreator.cpp" />
+		<Unit filename="shared/ISCPacketCreator.h" />
+		<Unit filename="shared/ISCPacketReader.cpp" />
+		<Unit filename="shared/ISCPacketReader.h" />
+		<Unit filename="shared/ItemData.cpp" />
+		<Unit filename="shared/ItemData.h" />
+		<Unit filename="shared/ItemDataManager.cpp" />
+		<Unit filename="shared/ItemDataManager.h" />
+		<Unit filename="shared/ItemPack.cpp" />
+		<Unit filename="shared/ItemPack.h" />
+		<Unit filename="shared/ItemPackManager.cpp" />
+		<Unit filename="shared/ItemPackManager.h" />
+		<Unit filename="shared/ItemSet.cpp" />
+		<Unit filename="shared/ItemSet.h" />
+		<Unit filename="shared/Log.cpp" />
+		<Unit filename="shared/Log.h" />
+		<Unit filename="shared/PacketCreator.cpp" />
+		<Unit filename="shared/PacketCreator.h" />
+		<Unit filename="shared/PacketReader.cpp" />
+		<Unit filename="shared/PacketReader.h" />
+		<Unit filename="shared/RandomOption.cpp" />
+		<Unit filename="shared/RandomOption.h" />
+		<Unit filename="shared/SpecialOption.cpp" />
+		<Unit filename="shared/SpecialOption.h" />
+		<Unit filename="shared/Timed.cpp" />
+		<Unit filename="shared/Timed.h" />
+		<Unit filename="shared/defineItem.cpp" />
+		<Unit filename="shared/defineItem.h" />
+		<Unit filename="world/ChatHandler.cpp" />
+		<Unit filename="world/ChatHandler.h" />
+		<Unit filename="world/CommandScriptEnv.cpp" />
+		<Unit filename="world/CommandScriptEnv.h" />
+		<Unit filename="world/Creature.cpp" />
+		<Unit filename="world/Creature.h" />
+		<Unit filename="world/DropObject.cpp" />
+		<Unit filename="world/DropObject.h" />
+		<Unit filename="world/Inventory.cpp" />
+		<Unit filename="world/Inventory.h" />
+		<Unit filename="world/Mail.cpp" />
+		<Unit filename="world/Mail.h" />
+		<Unit filename="world/MailManager.cpp" />
+		<Unit filename="world/MailManager.h" />
+		<Unit filename="world/MobObject.cpp" />
+		<Unit filename="world/MobObject.h" />
+		<Unit filename="world/MoverData.cpp" />
+		<Unit filename="world/MoverData.h" />
+		<Unit filename="world/NpcData.cpp" />
+		<Unit filename="world/NpcData.h" />
+		<Unit filename="world/NpcDialogEnv.cpp" />
+		<Unit filename="world/NpcDialogEnv.h" />
+		<Unit filename="world/NpcObject.cpp" />
+		<Unit filename="world/NpcObject.h" />
+		<Unit filename="world/PacketReceiver.cpp" />
+		<Unit filename="world/PacketReceiver.h" />
+		<Unit filename="world/Party.cpp" />
+		<Unit filename="world/Party.h" />
+		<Unit filename="world/PlayerObject.cpp" />
+		<Unit filename="world/PlayerObject.h" />
+		<Unit filename="world/PlayerScriptInterface.cpp" />
+		<Unit filename="world/PlayerScriptInterface.h" />
+		<Unit filename="world/PostBox.cpp" />
+		<Unit filename="world/PostBox.h" />
+		<Unit filename="world/Spawn.cpp" />
+		<Unit filename="world/Spawn.h" />
+		<Unit filename="world/SpawnData.cpp" />
+		<Unit filename="world/SpawnData.h" />
+		<Unit filename="world/World.cpp" />
+		<Unit filename="world/World.h" />
+		<Unit filename="world/WorldDataManager.cpp" />
+		<Unit filename="world/WorldDataManager.h" />
+		<Unit filename="world/WorldField.cpp" />
+		<Unit filename="world/WorldField.h" />
+		<Unit filename="world/WorldISC.cpp" />
+		<Unit filename="world/WorldISC.h" />
+		<Unit filename="world/WorldMain.cpp" />
+		<Unit filename="world/WorldMain.h" />
+		<Unit filename="world/WorldObject.cpp" />
+		<Unit filename="world/WorldObject.h" />
+		<Unit filename="world/WorldPlayer.cpp" />
+		<Unit filename="world/WorldPlayer.h" />
+		<Unit filename="world/WorldServer.cpp" />
+		<Unit filename="world/WorldServer.h" />
+		<Unit filename="world/WorldSettings.cpp" />
+		<Unit filename="world/WorldSettings.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,30 @@
+NAME "MaFl_Lui"
+MOVER 213
+
+POS 6975.66 100 3266.87
+WORLD 1
+ROTATION 3200
+SIZE 100
+
+PAGE 0
+	2026
+	2027
+END
+
+PAGE 1
+	2530
+	2544
+	2531
+	2545
+	2532
+	2546
+	2533
+	2548
+	2534
+END
+
+PAGE 2
+	2028
+END
+
+TEXT 20 "Alles was du suchst, wirst du im Geschäfft von Lui finden!"

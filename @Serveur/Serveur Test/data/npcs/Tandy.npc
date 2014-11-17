@@ -1,0 +1,38 @@
+NAME "MaDa_Tandy"
+MOVER 222
+
+POS 3202.74 10.0689 3437.85
+WORLD 1
+ROTATION 50
+SIZE 100
+
+PAGE 0
+	4803
+	4805
+	4804
+	4806
+END
+
+PAGE 1
+	2028
+	2026
+	2027
+END
+
+PAGE 3
+	2530
+	2544
+	2531
+	2545
+	2532
+	2546
+	2533
+	2896
+	2534
+	2548
+END
+
+TEXT 20 "Hier gibt es verschiedene
+Güter von den Nomaden!
+Komm doch zum Geschäft
+von Tandy!!"

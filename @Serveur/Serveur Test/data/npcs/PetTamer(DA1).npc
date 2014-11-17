@@ -1,0 +1,12 @@
+NAME "MaFl_PetTamer"
+MOVER 880
+
+POS 5569.1773340 75 3898.934814
+WORLD 1
+ROTATION 900
+SIZE 100
+
+TEXT 20 "Das Pet ist ein
+lebenswichtiger Partner
+für dich bei deinen
+Abenteuern in Madrigal."

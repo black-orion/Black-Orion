@@ -1,0 +1,40 @@
+NAME "MaDa_Stima"
+MOVER 221
+
+POS 5572.36 75.0001 3897.21
+WORLD 1
+ROTATION 1750
+SIZE 100
+
+PAGE 0
+	49
+	105
+	51
+	107
+END
+
+PAGE 1
+	201
+	351
+	203
+	353
+END
+
+PAGE 2
+
+	451
+	401
+	453
+	403
+END
+
+PAGE 3
+	251
+	301
+	253
+	303
+END
+
+TEXT 20 "Alles was du willst,
+findest du im Waffen
+Laden von Stima!"

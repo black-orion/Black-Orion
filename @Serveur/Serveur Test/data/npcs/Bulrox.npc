@@ -1,0 +1,76 @@
+NAME "MaSa_Bulrox"
+MOVER 215
+
+POS 8372.59 100 3673.2
+WORLD 1
+ROTATION 10
+SIZE 100
+
+PAGE 0
+	31
+	87
+	33
+	89
+	35
+	91
+	37
+	93
+	39
+	95
+	41
+	97
+	43
+	99
+	45
+	101
+	47
+	103
+END
+
+PAGE 1
+	333
+	183
+	185
+	335
+	187
+	337
+	189
+	339
+	191
+	341
+	193
+	343
+	195
+	345
+	197
+	347
+	199
+	349
+END
+
+PAGE 2
+	433
+	383
+	435
+	385
+	437
+	387
+	439
+	389
+	441
+	391
+	443
+	393
+	445
+	395
+	447
+	397
+	449
+	399
+END
+
+TEXT 20 "Sieh dir die besten
+Waffen an, die mit der
+Macht des Boomboom
+Stick, von Bulrox
+hergestellt wurden!"

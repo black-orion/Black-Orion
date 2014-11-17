@@ -1,0 +1,15 @@
+NAME "MaFl_Juria"
+MOVER 212
+
+POS 6958.780273 100 3210.946289
+WORLD 1
+ROTATION 1800
+SIZE 100
+
+PAGE 0
+	26456
+END
+
+DIALOG "MaFl_Juria.as"
+
+TEXT 20 "Pour des informations merci de bien vouloir s'adresser a moi"

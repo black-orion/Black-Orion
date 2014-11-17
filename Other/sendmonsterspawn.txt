@@ -1,0 +1,37 @@
+public void SendMonsterSpawn(Monster mob)
+        {
+            MergedPacket pak = new MergedPacket(mob.dwObjectID, EPacketCommands.ObjectSpawn);
+            pak.AddObjectHeader(mob);
+            pak.Addint16(5); //motion
+            pak.Addbyte(0); //bool est un joueur
+            pak.Addint32(mob.c_attributes[CoreDLL.Headers.DefineAttribute_Attributes.DST_HP]);
+
+            pak.Addint32(1); //StateFlag
+            pak.Addint32(0); //ForceSetState
+            pak.Addbyte(mob.c_data.dwBelligerence);
+            pak.Addint32(-1); //m_dwMoverSfxId
+            //---->nouveauté v15
+            pak.Addbyte(0); //hairid
+            pak.Addint32(-1);//haircolor
+            //---------------
+            pak.Addbyte(0); //faceID
+            pak.Addint32(0); //name
+            pak.Addbyte(0); // item count
+            if (mob.dwObjectModel !=1021)
+                pak.Addbyte(mob.bIsAgro?1:0); // (BOOL)Aggressive  
+            else
+                pak.Addbyte(0);
+            pak.Addbyte(0); //m_nMovePattern
+            pak.Addbyte(0); //m_nMoveEvent 
+            pak.Addint32(0);   //m_nMoveEventCnt         
+            pak.Addfloat(1); //speedfactor
+            pak.Addint32(0); //buffcount
+            SendPacket(pak);
+            if (mob.bIsAttacking)
+            {
+                pak = new MergedPacket(mob.dwObjectID, EPacketCommands.SpeedModifier);
+                pak.Addfloat(2);
+                SendPacket(pak);
+            }
+            pak = null;
+        }

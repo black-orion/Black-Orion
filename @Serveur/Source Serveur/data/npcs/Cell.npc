@@ -1,0 +1,11 @@
+NAME "MaDa_Cell"
+MOVER 215
+
+POS 5561.09 75.0287 3909.13
+WORLD 1
+ROTATION 0
+SIZE 100
+
+TEXT 20 "Du kannst verschiedene
+Metalle und Mineralien in
+der Mine finden."

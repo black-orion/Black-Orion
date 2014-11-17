@@ -1,0 +1,122 @@
+
+
+<-------->
+Error   bei System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 227.
+Message: InvalidArgument=Value mit dem Wert 2 ist für index ungültig.
+Parametername: index
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 227.
+Message: InvalidArgument=Value mit dem Wert 2 ist für index ungültig.
+Parametername: index
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 227.
+Message: InvalidArgument=Value mit dem Wert 2 ist für index ungültig.
+Parametername: index
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 227.
+Message: InvalidArgument=Value mit dem Wert 2 ist für index ungültig.
+Parametername: index
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 230.
+Message: InvalidArgument=Value mit dem Wert 2 ist für index ungültig.
+Parametername: index
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 230.
+Message: InvalidArgument=Value mit dem Wert 2 ist für index ungültig.
+Parametername: index
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListView.InsertItems(Int32 displayIndex, ListViewItem[] items, Boolean checkHosting)
+   bei System.Windows.Forms.ListView.ListViewNativeItemCollection.AddRange(ListViewItem[] values)
+   bei System.Windows.Forms.ListView.ListViewItemCollection.AddRange(ListViewItemCollection items)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 232.
+Message: Das Element 0 kann nur an einer Stelle hinzugefügt oder eingefügt werden. Entfernen Sie es von der aktuellen Position, oder klonen Sie es.
+Parametername: item
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListView.InsertItems(Int32 displayIndex, ListViewItem[] items, Boolean checkHosting)
+   bei System.Windows.Forms.ListView.ListViewNativeItemCollection.AddRange(ListViewItem[] values)
+   bei System.Windows.Forms.ListView.ListViewItemCollection.AddRange(ListViewItemCollection items)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 232.
+Message: Das Element 0 kann nur an einer Stelle hinzugefügt oder eingefügt werden. Entfernen Sie es von der aktuellen Position, oder klonen Sie es.
+Parametername: item
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListView.ListViewItemCollection.get_Item(Int32 index)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 229.
+Message: InvalidArgument=Value mit dem Wert 1 ist für index ungültig.
+Parametername: index
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListView.InsertItems(Int32 displayIndex, ListViewItem[] items, Boolean checkHosting)
+   bei System.Windows.Forms.ListView.ListViewNativeItemCollection.AddRange(ListViewItem[] values)
+   bei System.Windows.Forms.ListView.ListViewItemCollection.AddRange(ListViewItemCollection items)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 232.
+Message: Das Element 0 kann nur an einer Stelle hinzugefügt oder eingefügt werden. Entfernen Sie es von der aktuellen Position, oder klonen Sie es.
+Parametername: item
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListView.InsertItems(Int32 displayIndex, ListViewItem[] items, Boolean checkHosting)
+   bei System.Windows.Forms.ListView.ListViewNativeItemCollection.AddRange(ListViewItem[] values)
+   bei System.Windows.Forms.ListView.ListViewItemCollection.AddRange(ListViewItemCollection items)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 232.
+Message: Das Element 0 kann nur an einer Stelle hinzugefügt oder eingefügt werden. Entfernen Sie es von der aktuellen Position, oder klonen Sie es.
+Parametername: item
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListView.InsertItems(Int32 displayIndex, ListViewItem[] items, Boolean checkHosting)
+   bei System.Windows.Forms.ListView.ListViewNativeItemCollection.AddRange(ListViewItem[] values)
+   bei System.Windows.Forms.ListView.ListViewItemCollection.AddRange(ListViewItemCollection items)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 231.
+Message: Das Element 0 kann nur an einer Stelle hinzugefügt oder eingefügt werden. Entfernen Sie es von der aktuellen Position, oder klonen Sie es.
+Parametername: item
+<-------->
+
+
+<-------->
+Error   bei System.Windows.Forms.ListView.InsertItems(Int32 displayIndex, ListViewItem[] items, Boolean checkHosting)
+   bei System.Windows.Forms.ListView.ListViewNativeItemCollection.AddRange(ListViewItem[] values)
+   bei System.Windows.Forms.ListView.ListViewItemCollection.AddRange(ListViewItemCollection items)
+   bei USE.Editoren.NPC.NPC.ReadNPC() in j:\c-sharp\USE\USE\Editoren\NPCEditor.cs:Zeile 231.
+Message: Das Element 0 kann nur an einer Stelle hinzugefügt oder eingefügt werden. Entfernen Sie es von der aktuellen Position, oder klonen Sie es.
+Parametername: item
+<-------->
+
+
+<-------->
+Error   à UBO.Editoren.NPC.NPC.ReadNPC() dans I:\Source Flyff\Black Orion\Ultime Black Orion\Editeur\NPCEditor.cs:ligne 269
+Message: L'index se trouve en dehors des limites du tableau.
+<-------->

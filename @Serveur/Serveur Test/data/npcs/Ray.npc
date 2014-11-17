@@ -1,0 +1,11 @@
+NAME "MaFl_Ray"
+MOVER 223
+
+POS 6931.95 100 3259.48
+WORLD 1
+ROTATION 600
+SIZE 100
+
+DIALOG "FL_Ray.as"
+
+TEXT 20 "Envie d'aller a l'arene ?"

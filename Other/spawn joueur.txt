@@ -1,0 +1,975 @@
+//Packet de spawn envoyé aux autres joueurs visibles
+public void SendPlayerSpawnOther(Client c)
+        {
+            Packet pak = new Packet();
+            pak.StartNewMergedPacket(c.dwObjectID, EPacketCommands.ObjectSpawn);
+            pak.AddObjectHeader(c);
+            pak.Addint16(0);
+            pak.Addbyte(1);
+            pak.Addint32(c.c_attributes[CoreDLL.Headers.DefineAttribute_Attributes.DST_HP]);
+            pak.Addint32(c.c_data.dwMovingFlags);
+            pak.Addint32(c.c_data.dwMotionFlags);
+            pak.Addbyte(1);
+            pak.Addint32(-1); //--------->new in v15
+            pak.Addstring(c.c_data.strPlayerName);
+            pak.Addbyte(c.c_data.dwGender);
+            pak.Addbyte(0);
+            pak.Addbyte(c.c_data.dwHairID);
+            pak.Addint32(c.c_data.dwHairColor);
+            pak.Addbyte(c.c_data.dwFaceID);
+            pak.Addint32(c.c_data.dwCharacterID);
+            pak.Addbyte(c.c_data.dwClass);
+            pak.Addint16(c.c_attributes.dwMoverAttributes[(int)CoreDLL.Headers.DefineAttribute_Attributes.DST_STR]);
+            pak.Addint16(c.c_attributes.dwMoverAttributes[(int)CoreDLL.Headers.DefineAttribute_Attributes.DST_STA]);
+            pak.Addint16(c.c_attributes.dwMoverAttributes[(int)CoreDLL.Headers.DefineAttribute_Attributes.DST_DEX]);
+            pak.Addint16(c.c_attributes.dwMoverAttributes[(int)CoreDLL.Headers.DefineAttribute_Attributes.DST_INT]);
+            pak.Addint16(c.c_data.dwLevel);
+            pak.Addint32(c.c_data.dwGuildID > 0 ? 0xBB8 : -1);
+            pak.Addint32(0);
+            pak.Addbyte(c.c_data.dwGuildID > 0 ? 1 : 0);
+            if (c.c_data.dwGuildID > 0)
+            {
+                pak.Addint32(c.c_data.dwGuildID);
+                pak.Addint32(0); // TODO: guild duel ID
+            }
+            pak.Addint32(0);
+            pak.Addbyte(0);
+            pak.Addbyte(c.c_data.dwAuthority);
+            pak.Addint32(c.c_data.dwPlayerFlags);
+            pak.Addint32(0);
+            pak.Addint32(0x1F8);    //itemid le dernier item utilisé ?
+            pak.Addint32(0);
+            pak.Addint32(c.c_data.dwKarma);
+            pak.Addint32(c.c_data.dwDisposition);
+            pak.Addint32(0);
+            pak.Addint32(c.c_data.dwReputation);
+            pak.Addbyte(0);
+            pak.Addint32(c.c_data.dwCurrentAchivementTitle); //new in v13...
+            #region Effet visuelde l'inventaire
+            int dwCount = 0;
+            for (int i = 0x2A; i < 0x49; i++)
+            {
+                Item item = c.c_data.udcInventory.GetItemByPosition(i);
+                if (item == null || item.dwItemID <= 0)
+                {
+                    pak.Addint32(0);
+                }
+                else
+                {
+                    dwCount++;
+                    pak.Addbyte(item.dwRefine);
+                    pak.Addbyte(0);
+                    pak.Addbyte(item.dwElement);
+                    pak.Addbyte(item.dwEleRefine);
+                }
+            }
+            for (int i = 0; i < 28; i++)
+            {
+                pak.Addint32(0);
+            }
+            #endregion
+            pak.Addbyte(dwCount);
+            for (int i = 0x2A; i < 0x49; i++)
+            {
+                Item item = c.c_data.udcInventory.GetItemByPosition(i);
+                if (item != null && item.dwItemID > 0)
+                {
+                    pak.Addbyte(i - 0x2A);
+                    pak.Addint16(item.dwItemID);
+                    pak.Addbyte(0);
+                }
+            }
+            //pak.Addint32(0x150A0000); // Unknown
+            if (c_data.udcFamilier == null)
+                pak.Addint32(-1); //buffpet ?
+            else
+            {
+                pak.Addint16(c_data.udcFamilier.dwmodel);
+                pak.Addint16((int)c_data.udcFamilier.categorie);
+                pak.Addint32(0);
+                pak.Addint32(1);
+                pak.Addint16(2);
+                pak.Addint16(c_data.udcFamilier.dwitemID);
+                pak.Addint16(c_data.udcFamilier.BonusValue);
+                pak.Addint16(c_data.udcFamilier.attbuff);
+
+            }
+            pak.Addint32(0);
+            if (c.lstTemporaryAttributes.Count > 0)
+            {
+                pak.Addint32(c.lstTemporaryAttributes.Count); // Buffs + any other CS items (probably)
+                for (int i = 0; i < c.lstTemporaryAttributes.Count; i++)
+                {
+                    pak.Addint16(1);            // Buff type (skill/item/pet) | 1 = skill
+                    pak.Addint16(c.lstTemporaryAttributes[i].dwSkillID);
+                    pak.Addint32(c.lstTemporaryAttributes[i].dwSkillLevel);
+                    pak.Addint32(c.lstTemporaryAttributes[i].qwExpirationDate - TimeUtilities.Clock());
+                }
+            }
+            
+            pak.Send(c_socket);
+            if (c.c_data.c_shop.bIsOpen)
+            {
+                MergedPacket mp = new MergedPacket(c.dwObjectID, EPacketCommands.VendorShopOpen);
+                mp.Addstring(c.c_data.c_shop.strShopName);
+                SendPacket(mp);
+            }
+        }
+
+
+//Packet de spawn du joueur lui même
+public void SendPlayerSpawnSelf()
+        {
+            Packet pak = new Packet();
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.WeatherAll, 0x0000FF00);
+            pak.Addint32(0);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.WORLD_READINFO);
+            pak.Addint32(wmiMap.dwMapID);
+            pak.AddPosition(pPosition);            
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.ObjectSpawn);
+            pak.AddObjectHeader(this);
+            pak.Addint16(0);   //ar << (u_short)m_dwMotion;
+            pak.Addbyte(0x01);              //ar << (u_char)m_bPlayer;
+            pak.Addint32(c_attributes[CoreDLL.Headers.DefineAttribute_Attributes.DST_HP]); //ar << m_nHitPoint;
+            pak.Addint32(c_data.dwMovingFlags); //ar << m_pActMover->GetState();
+            pak.Addint32(c_data.dwMotionFlags); // ar << m_pActMover->GetStateFlag();
+            pak.Addbyte(0x01);                  //ar << (u_char)m_dwBelligerence;
+           //Pour bebe buffer V15
+           pak.Addint32(-1); //--------->new in v15   ar << m_dwMoverSfxId;
+           //Fin bebe buffeur v15
+            pak.Addstring(c_data.strPlayerName);  //ar.WriteString( m_szName );
+            
+            pak.Addbyte(c_data.dwGender);  //ar << GetSex();
+            pak.Addbyte(0x00);  //ar << (u_char)m_dwSkinSet;   //Semble avoir été desactivé ds le neuz donc toujours 0
+            pak.Addbyte(c_data.dwHairID);   // ar << (u_char)m_dwHairMesh;
+            pak.Addint32(c_data.dwHairColor);   // ar << m_dwHairColor;
+            pak.Addbyte(c_data.dwFaceID);   //ar << (u_char)m_dwHeadMesh;
+            pak.Addint32(c_data.dwCharacterID); // ar << m_idPlayer;
+            pak.Addbyte(c_data.dwClass);    //ar << (u_char)m_nJob;
+            pak.Addint16(c_attributes.dwMoverAttributes[(int)DefineAttribute_Attributes.DST_STR]); //ar << (u_short)m_nStr;
+            pak.Addint16(c_attributes.dwMoverAttributes[(int)DefineAttribute_Attributes.DST_STA]); //ar << (u_short)m_nSta;
+            pak.Addint16(c_attributes.dwMoverAttributes[(int)DefineAttribute_Attributes.DST_DEX]); // ar << (u_short)m_nDex;
+            pak.Addint16(c_attributes.dwMoverAttributes[(int)DefineAttribute_Attributes.DST_INT]); // ar << (u_short)m_nInt;
+            pak.Addint16(c_data.dwLevel); //ar << (u_short)m_nLevel;
+
+            pak.Addint32(-1); //ar << m_nFuel; int
+            pak.Addint32(0x00000000);                       // ar << m_tmAccFuel; int
+            pak.Addbyte(c_data.dwGuildID > 0 ? 1 : 0);  //si guild : ar << (u_char)1; sinon 0
+            
+            if (c_data.dwGuildID > 0)
+            {
+                Guild guild = Guild_system.getGuildByGuildID(c_data.dwGuildID);
+                if (guild == null)
+                {
+                    Log.Write(LogType.Error, "Unknown guild ID error - guild ID {0} does not exist?", c_data.dwGuildID);
+                    pak.Addint64(0);
+                }
+                else
+                {
+                    pak.Addint32(c_data.dwGuildID); //ar << m_idGuild;
+                    pak.Addint32(guild.duelInfo.dwDuelID); // TODO: Guild duel ID  ar << m_idWar;                    
+                }
+            }           
+            pak.Addint32(0x00000000);       //ar << m_idGuildCloak; //a voir si c'est l'id du logo.... [Divine]
+           
+            if (c_data.udcParty != null)
+            {
+                pak.Addbyte(0x01);  //ar << (u_char)1;
+                pak.Addint32(c_data.udcParty.dwPartyID);   //ar << m_idparty;
+                pak.Addint32(0x00000000);   //ar << m_idDuelParty;
+            }
+            else
+                pak.Addbyte(0x00);      //Party ou pas ??      
+            pak.Addbyte(c_data.dwAuthority);    //ar << (char)m_dwAuthorization;
+            pak.Addint32(c_data.dwPlayerFlags); //ar << m_dwMode;
+            pak.Addint32(0x00000000);   //ar << m_dwStateMode;
+            pak.Addint32(0x000001F6); //changé en v15
+            pak.Addint32(0x00000000); //ar << m_dwPKTime; ?? Temps depuis le dernier PK ?? [divine]
+            pak.Addint32(c_data.dwKarma);   //ar << m_nPKValue;    
+            pak.Addint32(c_data.dwDisposition); //ar << m_dwPKPropensity;
+            pak.Addint32(0x00000000);   //ar << m_dwPKExp;
+            pak.Addint32(c_data.dwReputation);  //ar << m_nFame;
+            pak.Addbyte(0); //ar << (u_char)m_nDuel;
+            pak.Addint32(c_data.dwCurrentAchivementTitle);  //Titre sélectionnée parmis les honneurs
+            int dwCount = 0;
+            #region inventory viewable effect
+            for (int i = 0x2A; i < 0x49; i++)
+            {
+                Item item = c_data.udcInventory.GetItemByPosition(i);
+                if (item != null && item.dwItemID > 0)  //ar << m_aEquipInfo[i].nOption;
+                {
+                    dwCount++;
+                    pak.Addint16(item.dwRefine);
+                    pak.Addbyte(item.dwElement);
+                    pak.Addbyte(item.dwEleRefine);
+                }
+            }
+            for (; dwCount < 31; dwCount++)
+            {
+                pak.Addint32(0x00000000);
+            }
+            #endregion
+            pak.Addint32(0x00000000);   //ar << m_nGuildCombatState; [divine] à faire avec les guerre de guilde
+            for (int i = 0; i < 26; i++)
+            {
+                pak.Addint32(0x00000000);   //ar << m_dwSMTime[j]; [divine] à voir ce que c'est ...
+            }
+
+            pak.Addint16(c_attributes[CoreDLL.Headers.DefineAttribute_Attributes.DST_MP]); //ar << (u_short)m_nManaPoint;
+            pak.Addint16(c_attributes[CoreDLL.Headers.DefineAttribute_Attributes.DST_FP]); //ar << (u_short)m_nFatiguePoint;
+            pak.Addint32(0);    //ar << m_nTutorialState;    C'est el point ou on en es du tutoriel debutant                
+            pak.Addint32(c_data.dwFlyingExperience);    //ar << m_nFxp;            
+            pak.Addint32(dwPenya);  //ar << dwGold;
+            pak.Addint64(c_data.qwExperience);      //ar << m_nExp1;       
+            pak.Addint32(CalculateTotalSkillPoint());   //ar << m_nSkillLevel;
+            pak.Addint32(c_data.dwSkillPoints); //point de skill restant ar << m_nSkillPoint;
+            pak.Addint32(0);    //ar << m_nDeathExp;
+            pak.Addint32(0);    // ar << m_nDeathLevel; [Divine] Apparemment c'est pour les boite d'xp a recuperer
+
+            pak.Addint32(c_data.dwLevel);   //ar.Write( (void*)dwJobLv, sizeof(DWORD) * MAX_JOB ); MAX_JOB = 32 !
+            for (int i = 0; i < 32; i++) //on indique le level dans chaque job...
+            {
+                pak.Addint32(0x00000000);
+            }
+           //[Divine] : Apparemment il s'agit du point de sauvegarde ou revenir en cas de mort à tester
+            pak.Addint32(c_data.dwResurrectionmapid);              //ar << m_idMarkingWorld;
+            pak.AddPosition(c_data.pResurrection);    //ar << m_vMarkingPos;
+            
+            #region quest part
+            pak.AddQuests(this);
+            #endregion
+           
+            #region Bounty system
+            pak.Addint32(c_data.dwLastMuredererID);  //ar << m_idMurderer; [divine] lié au bounty systeme
+            if (c_data.dwLastMuredererID != 0)
+            {
+                bool find = false;
+                for (int i = 0; i < GameServer.lstReward.Count; i++)
+                {
+                    if (GameServer.lstReward[i].murderID == c_data.dwLastMuredererID)
+                    {
+                        find = true;
+                        pak.Addint16(GameServer.lstReward[i].rewardvalue); //.ar << (short)m_nRemainGP;
+                        pak.Addint16(0);    // ar << (short)0;
+                    }
+                }
+                if (!find)
+                {
+                    pak.Addint16(0); //.ar << (short)m_nRemainGP;
+                    pak.Addint16(0);    // ar << (short)0;
+                }
+            }
+            else
+            {
+                pak.Addint16(0); //.ar << (short)m_nRemainGP;
+                pak.Addint16(0);    // ar << (short)0;
+            }
+            #endregion
+            //pak.Addint32(c_data.dwStatPoints);
+            
+            #region Mask pour chaques slot
+            for (int i = 0x2A; i < 0x49; i++)
+            {
+
+                if (i == 0x2A + (int)DefineNeuz_Part.PARTS_CAP)
+                {
+                    Item item = c_data.udcInventory.GetItemByPosition(i);
+                    if (item != null && item.dwItemID > 0)
+                    {
+                        pak.Addint32(c_data.udcInventory.GetMask(i)); //ar << m_aEquipInfo[i].dwId;
+                    }
+                    else
+                    {
+                        pak.Addint32(0xFFFFFFFF);
+                    }
+                }
+                else
+                {
+                    pak.Addint32(0xFFFFFFFF);
+                }
+            }
+            #endregion
+            #region  Skilllist
+            for (int i = 0; i < 45; i++)
+            {
+                pak.Addint32(c_data.lstSkills[i].dwSkillID); //ar.Write( (void*)m_aJobSkill, sizeof(SKILL) *  ( MAX_SKILL_JOB ) );
+                pak.Addint32(c_data.lstSkills[i].dwSkillLevel);
+            }
+            #endregion
+            pak.Addbyte(c_data.dwCheerPoints); //ar << (BYTE)m_nCheerPoint << m_dwTickCheer - GetTickCount();
+            pak.Addint32(1000 * 60 * 60 * 1);//time remaining before next cheer point ! Mais c'est debile car c'est reinitialisé à chaque spawn lol
+            
+            #region bank infos
+            pak.Addbyte(c_data.dwCharacterSlot); //ar << m_nSlot;
+            for (int i = 0; i < 3; i++)
+            {
+                pak.Addint32(c_data.udsBank.dwPenya[i]);//ar << m_dwGoldBank[k];
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                pak.Addint32(c_data.udsBank.dwCharacterID[i]); //ar << m_idPlayerBank[k];
+            }
+            #endregion
+            pak.Addint32(0x00000000); //ar << m_nPlusMaxHitPoint;
+            pak.Addbyte(0xFF);  //ar << m_nAttackResistLeft;				
+            pak.Addbyte(0xFF);  //ar << m_nAttackResistRight;				
+            pak.Addbyte(0xFF);  //ar << m_nDefenseResist;
+            pak.Addint64(0x00000000); //ar << m_nAngelExp;		---->[divine] Pour les ange de PK		
+            pak.Addint32(0x00000000); //ar << m_nAngelLevel;            
+            dwCount = 0;
+            #region inventory
+            for (int i = 0; i < 73; i++)
+            {
+                pak.Addint32(c_data.udcInventory.GetMask(i));
+                if (c_data.udcInventory.GetItemByID(i) == null)
+                    continue;
+                if (c_data.udcInventory.GetItemByID(i).dwItemID > 0)
+                {
+                    dwCount++;
+                }
+            }
+            pak.Addbyte(dwCount);
+            for (int i = 0; i < 73; i++)
+            {
+                if (c_data.udcInventory.GetItemByID(i) == null)
+                    continue;
+                if (c_data.udcInventory.GetItemByID(i).dwItemID > 0)
+                {
+                    pak.Addbyte(i);
+                    pak.Addint32(i);
+                    pak.AddItemData(c_data.udcInventory.GetItemByID(i));
+                }
+            }
+            for (int i = 0; i < 73; i++)
+            {
+                pak.Addint32(c_data.udcInventory.GetLookup(i));
+            }
+            #endregion
+            #region bank part
+            for (int i = 0; i < 3; i++)
+            {
+                dwCount = 0;
+                for (int j = 0; j < 0x2A; j++)
+                {
+                    if (c_data.udsBank.udcItems[i, j] != null)
+                    {
+                        dwCount++;
+                    }
+                    pak.Addint32(j);
+                }
+                pak.Addbyte(dwCount);             // Bank items count in bank #i
+                for (int j = 0; j < dwCount; j++)
+                {
+                    pak.Addbyte(j);
+                    pak.Addint32(j);
+                    pak.AddItemData(c_data.udsBank.udcItems[i, j]);
+                   // pak.Addint32(0); //nouveauté v15
+                }
+                for (int j = 0; j < 0x2A; j++)
+                {
+                    pak.Addint32(j);
+                }
+            }
+            #endregion
+            #region Familier
+            if (c_data.udcFamilier == null)
+                pak.Addint32(0xFFFFFFFF);       // Pet buff
+           else
+               pak.Addint32(c_data.udcFamilier.dwObjectModel);
+            #endregion
+           
+            #region Premium bag
+
+            pak.Addbyte(isAvailablePocket(0) ? 1 : 0);
+            for (int i = 0; i < 6; i++)
+            {
+                pak.Addint32(i);
+            }            
+            pak.Addbyte(PocketBase.NombreItems);                 // Base bag item count
+            int count = 0;
+            for (int i = 0; i <= PocketBase.Length; i++)
+            {
+                if (PocketBase.GetItem(i) != null)
+                {
+                    pak.Addbyte(count);             // Slot
+                    pak.Addint32(count);            // Slot
+                    pak.AddItemData(PocketBase.GetItem(i));
+                    count++;
+                }
+            }
+            for (int i = 0; i < 6; i++)
+            {
+                pak.Addint32(i);
+            }
+            pak.Addint32(0x00000000);
+            pak.Addint32(0x00000000);
+           
+           // pak.Addbyte(0);                 // Premium bag #1 enabled (boolean)
+            pak.Addbyte(isAvailablePocket(1) ? 1 : 0);
+            if (isAvailablePocket(1))
+            {
+                for (int i = 0; i < 24; i++)
+                {
+                    pak.Addint32(i);
+                }                
+                pak.Addbyte(PocketOne.NombreItems);             // Premium bag #1 item count
+                count = 0;
+                for (int i = 0; i < PocketOne.Length; i++)
+                {
+                    if (PocketOne.GetItem(i) != null)
+                    {
+                        pak.Addbyte(count);
+                        pak.Addint32(count);
+                        pak.AddItemData(PocketOne.GetItem(i));
+                        count++;
+                    }
+                }
+                for (int i = 0; i < 24; i++)
+                {
+                    pak.Addint32(i);
+                }
+                pak.Addint32(0x00000000);
+                pak.Addint32((int)(DateTime.Now - TimeUtilities.UtcStart).TotalSeconds);           // time(lastuntil)
+                pak.Addint32(PocketOne.TimeLeft);            // durée restante en seconde
+                Log.Write(LogType.Debug, "Temps restant bag1 {0}", PocketOne.TimeLeft);
+            }
+
+           // pak.Addbyte(0);                 // Premium bag #2 enabled (boolean)
+            pak.Addbyte(isAvailablePocket(2) ? 1 : 0);
+            if (isAvailablePocket(2))
+            {
+                for (int i = 0; i < 24; i++)
+                {
+                    pak.Addint32(i);
+                }
+
+                pak.Addbyte(PocketTwo.NombreItems);             // Premium bag #1 item count
+                count = 0;
+                for (int i = 0; i < PocketTwo.Length; i++)
+                {
+                    if (PocketTwo.GetItem(i) != null)
+                    {
+                        pak.Addbyte(count);
+                        pak.Addint32(count);
+                        pak.AddItemData(PocketTwo.GetItem(i));
+                        count++;
+                    }
+                }
+                for (int i = 0; i < 24; i++)
+                {
+                    pak.Addint32(i);
+                }
+                pak.Addint32(0x00000000);
+                pak.Addint32((int)(DateTime.Now - TimeUtilities.UtcStart).TotalSeconds);           // time(lastuntil)
+                pak.Addint32(PocketTwo.TimeLeft);            // durée restante en seconde
+                Log.Write(LogType.Debug, "Temps restant bag12 {0}", PocketTwo.TimeLeft);
+            }
+            #endregion
+          
+            
+            
+            pak.Addint32(0); //ar << m_dwMute;  Pour indiqur si le joueur ne peut plus parler !
+            #region V13 Titres Honorifique
+            int x = 0;
+            for (x = 0; x < c_data.Achievement.Count; x++)
+            {
+                pak.Addint32(c_data.Achievement[x]);                
+            }
+            for (; x < 150; x++)
+            {
+                pak.Addint32(0);                
+            }            
+            #endregion
+            //-------------------------->changement en v15...
+            pak.Addint32(0x00000000); // ar << m_idCampus;
+            pak.Addint32(0x00000000); //				ar << m_nCampusPoint;
+            //--------------------------<
+            #region Buff part
+            pak.Addint32(lstTemporaryAttributes.Count); // ar << m_mapBuffs.size() - GetRemoveBuffSize();
+            for (int i = 0; i < lstTemporaryAttributes.Count; i++)
+            {
+                pak.Addint16(1);            // Buff type (skill/item/pet) | 1 = skill  ar << m_wType; 
+                pak.Addint16(lstTemporaryAttributes[i].dwSkillID); //ar << m_wId;
+                pak.Addint32(lstTemporaryAttributes[i].dwSkillLevel);
+                pak.Addint32(lstTemporaryAttributes[i].qwExpirationDate - TimeUtilities.Clock());
+            }
+            #endregion
+            #region GameTime            
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GameTime);
+            long unixTime = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
+            //pak.Addint64(unixTime); //semble ne servir à rien
+            pak.Addint16(0);
+            pak.Addbyte(0);
+            pak.Addbyte(0);
+            pak.Addfloat((float)GameServer.GameTime/100000);
+           
+            #endregion
+            #region binding and shorkey data
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.BindingsData);
+            #region quickslot
+            pak.Addint32(c_data.lstQuickslots.Count);
+            for (int i = 0; i < c_data.lstQuickslots.Count; i++)
+            {
+                pak.Addint32(c_data.lstQuickslots[i].dwSlot);
+                pak.Addint32(c_data.lstQuickslots[i].dwOperation);
+                pak.Addint32(c_data.lstQuickslots[i].dwID);
+                pak.Addint32(0x00000000);
+                pak.Addint32(c_data.lstQuickslots[i].dwSlot);
+                pak.Addint32(0x00000000);
+                pak.Addint32(0x00000000);
+                if (c_data.lstQuickslots[i].dwOperation == 0x00000008)
+                {
+                    pak.Addstring(c_data.lstQuickslots[i].strText);
+                }
+            }
+            #endregion
+            #region shortkey
+            pak.Addint32(c_data.lstShortkeys.Count);
+            for (int i = 0; i < c_data.lstShortkeys.Count; i++)
+            {
+                pak.Addint32(c_data.lstShortkeys[i].dwContainer);
+                pak.Addint32(c_data.lstShortkeys[i].dwSlot);
+                pak.Addint32(c_data.lstShortkeys[i].dwOperation);
+                pak.Addint32(c_data.lstShortkeys[i].dwID);
+                pak.Addint32(0x00000000);
+                pak.Addint32(c_data.lstShortkeys[i].dwSlot);
+                pak.Addint32(0x00000000);
+                pak.Addint32(0x00000001);
+                if (c_data.lstShortkeys[i].dwOperation == 0x00000008)
+                {
+                    pak.Addstring(c_data.lstShortkeys[i].strText);
+                }
+            }
+            #endregion
+            #endregion
+            #region actionslot
+            int number = 0;
+            for (int i = 0; i < 5; i++) { if (c_data.actionslot_option[i] != 0) number++; }
+            pak.Addint32(number);
+            for (int i = 0; i < number; i++)
+            {
+                pak.Addint32(i);
+                pak.Addint32(c_data.actionslot_option[i]);
+                pak.Addint32(c_data.actionslot[i]);
+                pak.Addint32(0);
+                pak.Addint32(i);
+                pak.Addint32(0);
+                pak.Addint32(2);
+            }
+            pak.Addint32(c_data.dwactionslotbar);               // 0-100 - actionslot exhaustion
+            #endregion
+            #region Weather
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.WeatherClear);
+            pak.Addint32(1);
+            pak.Addint32(0);
+            #endregion
+            #region Friend part  
+            #region guild
+            if (c_data.dwGuildID > 0)
+            {
+                Guild myguild = Guild_system.getGuildByGuildID(c_data.dwGuildID);
+                if (myguild != null)
+                {
+                    for (int i = 0; i < myguild.members.Count; i++)
+                    {
+                        if (myguild.members[i] == null)
+                            continue;
+                        characters others = characters.getCharactersByID(myguild.members[i].dwCharacterID);
+                        if (others == null)
+                            break;
+                        pak.StartNewMergedPacket(-1, EPacketCommands.QUERY_PLAYER_DATA);
+                        pak.Addint32(others.dwCharacterID);
+                        pak.Addstring(others.strPlayerName);
+                        pak.Addbyte(others.dwClass);
+                        pak.Addbyte(others.dwLevel);
+                        pak.Addbyte(others.dwGender);
+                        pak.Addbyte(others.dwClusterID);  //0x00 before
+
+                        if (others.dwClusterID != 0)
+                        {
+                            pak.Addint32(Helper.GetCorePlayerPosition(others.dwCharacterID));   //position in cache i think
+                            pak.Addint32(others.isOnline);
+                        }
+                        else
+                        {
+                            pak.Addint32(characters.GetPositionInCharactersList(others.dwCharacterID));   //5 ?
+                            pak.Addint32(0); //0 ?
+                        }
+
+                    }
+                }
+            }
+            #endregion
+            #region couple
+            Couple mycouple = Couple_system.GetMyCouple(c_data.dwCharacterID);
+            if (mycouple != null)
+            {
+                int id = 0;
+                if (mycouple.dwCharidLover1 != c_data.dwCharacterID)
+                    id = mycouple.dwCharidLover1;
+                else
+                    id = mycouple.dwCharidLover2;
+                characters other = Helper.GetCharacterByID(id);
+                pak.StartNewMergedPacket(-1, EPacketCommands.QUERY_PLAYER_DATA);
+                pak.Addint32(other.dwCharacterID);
+                pak.Addstring(other.strPlayerName);
+                pak.Addbyte(other.dwClass);
+                pak.Addbyte(other.dwLevel);
+                pak.Addbyte(other.dwGender);
+                pak.Addbyte(other.dwClusterID);  //0x00 before
+
+                if (other.dwClusterID != 0)
+                {
+                    pak.Addint32(Helper.GetCorePlayerPosition(other.dwCharacterID));   //position in cache i think
+                    pak.Addint32(other.isOnline);
+                }
+                else
+                {
+                    pak.Addint32(characters.GetPositionInCharactersList(other.dwCharacterID));   //5 ?
+                    pak.Addint32(0); //0 ?
+                }
+            }
+            #endregion
+            #region friend data
+            for (int i = 0; i < c_data.lstFriends.Count; i++)
+            {
+                Friend f = c_data.lstFriends[i];
+                pak.StartNewMergedPacket(-1, EPacketCommands.QUERY_PLAYER_DATA);
+                pak.Addint32(f.dwCharacterID);
+                pak.Addstring(f.cache.strPlayerName);
+                pak.Addbyte(f.cache.dwClass);
+                pak.Addbyte(f.cache.dwLevel);
+                pak.Addbyte(f.cache.dwGender);
+                pak.Addbyte(f.cache.CorePlayer.dwClusterID);  //0x00 before
+                CorePlayer player = f.cache.CorePlayer;
+                if (player != null)
+                {
+                    pak.Addint32(f.cache.dwisOnline);   //position in cache i think
+                    pak.Addint32(f.cache.dwisOnline);   //si en ligne 1
+                }
+                else
+                {
+                    pak.Addint32(1);   //5 ?
+                    pak.Addint32(1); //0 ?
+                }
+            }
+            #endregion
+            for (int i = 0; i < c_data.lstFriends.Count; i++)
+            {
+                pak.StartNewMergedPacket(dwObjectID, EPacketCommands.ADDFRIENDGAMEJOIN);
+                pak.Addint32(c_data.dwNetworkStatus);
+                pak.Addint32(c_data.lstFriends.Count);
+                for (int j = 0; j < c_data.lstFriends.Count; j++)
+                {
+                    pak.Addint32(c_data.lstFriends[j].dwCharacterID);
+                    pak.Addint32(c_data.lstFriends[j].bBlocked ? 1 : 0);
+                    CorePlayer player2 = c_data.lstFriends[i].cache.CorePlayer;
+                    if (player2 != null)
+                    {
+                        if (c_data.lstFriends[i].cache.dwisOnline ==1)
+                            pak.Addint32(0);
+                        else
+                            pak.Addint32(1);
+                    }
+                    else
+                    {
+                        pak.Addint32(1);
+                    }
+                }
+            }
+            
+            if (c_data.lstFriends.Count == 0)
+            {
+                pak.StartNewMergedPacket(dwObjectID, EPacketCommands.ADDFRIENDGAMEJOIN);
+                pak.Addint32(0);
+                pak.Addint32(0);
+            }
+            #endregion
+            #region party defaut name
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.PartyDefaultName);
+            if (c_data.strPartyname != "")
+                pak.Addstring(c_data.strPartyname);
+            else
+                pak.Addint32(0);
+            #endregion
+            #region Total play time
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.ADDGAMEJOIN);
+            pak.Addint32(c_data.dwTotalPlayTime);  //total play time
+            #endregion
+            #region Guilddata
+            pak.StartNewMergedPacket(-1, EPacketCommands.GuildDataAll);
+            pak.Addint32(GameServer.lstGuild.Count);
+           
+            List<Guild> lstactiveguilds = new List<Guild>();
+            int guildactive = Guild_system.GetActiveGuildNumber(ref lstactiveguilds);
+            pak.Addint32(guildactive);
+            
+            for (int i = 0; i < lstactiveguilds.Count; i++)
+            {
+                
+                    Guild guild = lstactiveguilds[i];
+                    
+                    pak.Addint32(guild.dwGuildID);
+                    pak.Addint32(guild.dwFounderID);
+                    pak.Addint32(guild.dwLevel);
+                    if (guild.strGuildName != "")
+                        pak.Addstring(guild.strGuildName);
+                    else
+                        pak.Addint32(0);
+                    pak.Addint32(guild.dwGuildLogo);
+                    pak.Addint32(guild.dwPenya);
+                    pak.Addint32(guild.dwDuelWins);
+                    pak.Addint32(guild.dwDuelLoses);
+                    pak.Addint32(guild.dwDuelForfeits);
+                
+            }
+            pak.Addint32(1);
+            for (int i = 0; i < 8; i++)
+                pak.Addint32(0);
+            #endregion
+            #region Guild data single
+            if (c_data.dwGuildID > 0)
+            {
+               
+                Guild myguild = null;
+                myguild = Guild_system.getGuildByGuildID(c_data.dwGuildID);
+                if (myguild != null)
+                {
+                    
+                    SendGuildDataSingle(myguild);
+                }
+            }
+            
+            #endregion
+            #region server setting
+            pak.StartNewMergedPacket(-1, EPacketCommands.FLYFF_EVENT);
+            pak.Addbyte(0x00);
+            pak.Addbyte(0x01);  // duel enabled ?
+            pak.Addbyte(0x01);  // Enable guild warehouse
+            pak.Addbyte(0x01);  // Enable guild war
+            pak.Addbyte(ServerConfiguration.sClientSettings.bEnabledFriendsList ? 0 : 1);  // school
+            pak.Addbyte(0x00);  // school_battle
+            pak.Addbyte(0x00); //no flymonster
+            pak.Addbyte(0x00);  //no darkon
+            pak.Addbyte(0x00);  //no guild
+            pak.Addbyte(0x01);  // no wormon
+            pak.Addbyte(0x00);  // despawn
+            pak.Addbyte(0x01);  // PK
+            pak.Addbyte(0x01);  // PKcost
+            pak.Addbyte(0x00); //steal
+            pak.Addbyte(0x00); //event0913
+            pak.Addbyte(0x01);  // guildcombat
+            pak.Addbyte(0x00); //dropitemremove
+            pak.Addbyte(0x00); //event1206
+            pak.Addbyte(0x00); //event1219
+            pak.Addbyte(0x00); //event0127
+            pak.Addbyte(0x00); //event0214
+            pak.Addbyte(0x01);
+            pak.Addbyte(0x01);  // combat war 1vs 1
+            pak.Addbyte(0x01);  //arene
+            pak.Addbyte(0x01);  //secret room
+            pak.Addbyte(0x01);  //rainbow race
+            pak.Addbytes(new byte[998]);
+            #endregion            
+            #region Lord setting
+            pak.StartNewMergedPacket(-1, EPacketCommands.LORD);
+            pak.Addint32(7);
+            pak.Addint32(1);
+            pak.Addint32(0);
+            pak.Addint32(0x4B3D2CF0); //lord moverid ?
+            pak.Addint32(0xFFFFFFF6); //lor wwoman moverid ?
+            pak.Addint32(6); //nombre de jour dans la semaine
+            pak.Addint32(0);
+            pak.Addint32(0x00015180); //temps en seconde pour deposer candidature
+            pak.Addint32(0x0002A300); //temps en seconde pour voter
+            pak.Addfloat(0.1f);  //recupère si annule candidature
+            pak.Addint32(0x0E);  //14 jour d'election
+            pak.Addint32(0x0B);  //12 jour de regne apres les 2 jours d'election
+            pak.Addfloat(1.0f);  //recupération d'argent misé par le 1er
+            pak.Addfloat(1.0f);  //recupération d'argent misé par le 2eme
+            pak.Addfloat(0.8f);  //recupération d'argent misé par le 3eme
+            pak.Addfloat(0.6f);  //recupération d'argent misé par le 4eme
+            pak.Addfloat(0.4f);  //recupération d'argent misé par le 5eme
+            pak.Addfloat(0.2f);  //recupération d'argent misé par le 6eme
+            for (int i = 0; i < 4; i++) //les 4 dernier sur les 10 retenu recup rien
+                pak.Addint32(0);
+            pak.Addfloat(0.98f); //recupéré par ceux au dela de 10
+            pak.Addint32(7); //number of item for lord
+            pak.Addint32(20026);
+            pak.Addint32(20027);
+            pak.Addint32(20028);
+            pak.Addint32(20029);
+            pak.Addint32(21067);
+            pak.Addint32(4707);
+            pak.Addint32(5816);
+            pak.Addint32(7); //number of item for lord woman
+            pak.Addint32(20031);
+            pak.Addint32(20032);
+            pak.Addint32(20033);
+            pak.Addint32(20034);
+            pak.Addint32(21067);
+            pak.Addint32(4707);
+            pak.Addint32(5816);
+            pak.Addint32(0);
+            pak.Addint32(0);
+            pak.Addint32(8); //number of lord skills
+            for (int i = 0; i < 8; i++)
+            {
+                pak.Addint32(i);
+                pak.Addint32(0);
+            }
+            #endregion
+            #region CoupleInfos
+            if (mycouple != null)
+            {
+                pak.StartNewMergedPacket(dwObjectID, EPacketCommands.CoupleInfos);
+                pak.Addint32(mycouple.dwExperience);
+                pak.Addint32(mycouple.dwCharidLover1);
+                pak.Addint32(mycouple.dwCharidLover2);
+            }
+            #endregion
+            #region Message mail TO CHANGE
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.MessageMails);
+            pak.Addint16(0); //mail unread count
+            #endregion
+            #region Party
+            if (c_data.udcParty != null)
+            {
+                pak.StartNewMergedPacket(dwObjectID, EPacketCommands.PartyUpdate);
+                pak.Addint32(0x00000000);
+                pak.Addstring(c_data.udcParty.fcLeader.strPlayerName);
+                pak.Addint32(0);
+                pak.Addint32(c_data.udcParty.Count);
+                pak.Addint32(c_data.udcParty.dwPartyID);
+                pak.Addint32((int)c_data.udcParty.dwType);
+                pak.Addint32(c_data.udcParty.Count);  //doubt it could be client position in the list
+                pak.Addint32(c_data.udcParty.dwPartyLevel);
+                pak.Addint32(c_data.udcParty.dwExperience);
+                pak.Addint32(c_data.udcParty.dwSkillPoints);
+                pak.Addint32((int)c_data.udcParty.dwExpDistri);
+                pak.Addint32((int)c_data.udcParty.dwItemDistri);
+                pak.Addint32(0x00000000);
+                pak.Addint32(0x00000000);
+                pak.Addint32(0x00000000);
+                pak.Addint32(0x00000000);
+                pak.Addint32(0x00000000);
+                if (c_data.udcParty.dwType == PartyType.Advanced)
+                {
+                    pak.Addstring(c_data.udcParty.strPartyName);
+                }
+                for (int i = 0; i < c_data.udcParty.Count; i++)
+                {
+                    if (c_data.udcParty.lstMembers[i] != null)
+                    {
+                        pak.Addint32(c_data.udcParty.lstMembers[i].dwCharacterID);
+                        pak.Addint32(c_data.udcParty.lstMembers[i].dwisOnline);
+                        Log.Write(LogType.Debug, "At spawn have add party member {0} who is {1} for status", c_data.udcParty.lstMembers[i].dwCharacterID, c_data.udcParty.lstMembers[i].dwisOnline);
+                    }
+                }
+            }
+            #endregion
+            #region unknow end packet
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.SM_MODE_ALL);
+            pak.Addint16(0);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GameRates);
+            pak.Addfloat(ServerConfiguration.sRates.fShopCostRate);
+            pak.Addbyte((byte)RateType.ShopCost);           
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GameRates);
+            pak.Addfloat(ServerConfiguration.sRates.fExpRate);
+            pak.Addbyte((byte)RateType.MonsterExpRate);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GameRates);
+            pak.Addfloat(ServerConfiguration.sRates.fDropRate);
+            pak.Addbyte((byte)RateType.ItemDropRate);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GameRates);
+            pak.Addfloat(ServerConfiguration.sRates.fGoldRate);
+            pak.Addbyte((byte)RateType.GoldDropRate);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GameRates);
+            pak.Addfloat(ServerConfiguration.sRates.fMonsterHitRate);
+            pak.Addbyte((byte)RateType.MonsterHitRate);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GameRates);
+            pak.Addfloat(ServerConfiguration.sRates.fMonsterHPRate);
+            pak.Addbyte((byte)RateType.MonsterHitpoint);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.MONSTERPROP);
+            pak.Addint64(0);
+            #region new unknow from v14
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.ALLACTION);
+            pak.Addint64(1);
+            #region GUILD COMBAT INFOS
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GUILDCOMBAT);
+            pak.Addbyte(0x08);
+            pak.Addint32(0);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GUILDCOMBAT);
+            pak.Addbyte(0x30);
+            pak.Addint32(1);
+            pak.Addint32(0x69);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GUILDCOMBAT);
+            pak.Addbyte(0x31);
+            pak.Addint32(0xEDDE880F);
+            pak.Addint32(0x00);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GUILDCOMBAT);
+            pak.Addbyte(0);
+            pak.Addint32(1);
+            pak.Addint32(0);
+            pak.Addint32(0);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GUILDCOMBAT);
+            pak.Addbyte(7);
+            pak.Addint32(1);
+            #endregion
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.SECRETROOM_MNG_STATE);
+            pak.Addint64(1);
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.TAX_ALLINFO);
+            pak.Addint32(3);
+            pak.Addbyte(0x0F);
+            pak.Addint32(-1);
+            pak.Addint32(3);
+            pak.Addbyte(0);
+            pak.Addint32(0);
+            pak.Addbyte(1);
+            pak.Addint32(0);
+            pak.Addbyte(2);
+            pak.Addint32(0);
+            pak.Addbyte(0x0F);
+            pak.Addint32(-1);
+            pak.Addint32(2);
+            pak.Addbyte(0);
+            pak.Addint32(0);
+            pak.Addbyte(1);
+            pak.Addint32(0);
+            pak.Addbyte(0xFF);
+            pak.Addint32(-1);            
+            pak.Addint32(3);
+            pak.Addbyte(0);
+            pak.Addint32(0);
+            pak.Addbyte(1);
+            pak.Addint32(0);
+            pak.Addbyte(2);
+            pak.Addint32(0);
+            #region Maisons de guildes
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.GUILDHOUSE_ALLINFO);
+            pak.Addint32(1); //bSetFurnitureChannel
+            pak.Addint32(0); //bHaveGuildHouse
+            /*if (int.Parse("on ne rentre pas dans cette boucle") > 0)
+            {
+                pak.Addint32(0); //m_dwGuildId
+                pak.Addint32(0); //worldID
+                pak.Addint32(0); //m_tUpkeepTime
+                pak.Addint32(0); //nSize
+                //....et plus selon taille de la maison...
+            }*/
+            #endregion
+            #region Maisons 
+            pak.StartNewMergedPacket(dwObjectID, EPacketCommands.HOUSING_ALLINFO);
+            pak.Addint32(0); //size infos housing
+            pak.Addint32(0); //size info ami autorisé
+            #endregion
+
+            #endregion
+            #endregion
+            if (ServerConfiguration.sGameConfiguration.bEnableWelcomeMessage)
+            {
+                pak.StartNewMergedPacket(dwObjectID, EPacketCommands.MessageHud);
+                pak.Addstring(ServerConfiguration.sGameConfiguration.strWelcomeMessage);
+            }
+            pak.Send(c_socket);
+            pak = null;
+        }

@@ -1,0 +1,25 @@
+NAME "MaFl_Losha"
+MOVER 210
+
+POS 7172.42 100 3212.39
+WORLD 1
+ROTATION 390
+SIZE 100
+
+PAGE 0
+	2800
+	2801
+	2802
+	2803
+	2804
+	2805
+	2827
+	2828
+	2829
+	2830
+END
+
+TEXT 20 "Hier gibt es das beste
+Essen von Flaris! Komm zu
+mir, zum
+Lebensmittelgeschäft!"

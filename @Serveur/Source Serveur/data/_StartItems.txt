@@ -1,0 +1,15 @@
+//ITEM command: [Place] [Item] [Count] [Upgrade] [Element] [EleUpgrade] [Statting] [SlotAnzahl] [...]
+//SEX command: [Type] (MALE | FEMALE | ALL)
+
+//Wooden Sword (52 = rechte Hand)
+ITEM 52 21 1 1 1 1 37 0
+
+SEX MALE
+ITEM 44 502 1 0 0 0 0 0
+ITEM 46 506 1 0 0 0 0 0
+ITEM 47 510 1 0 0 0 0 0
+
+SEX FEMALE
+ITEM 44 504 1 0 0 0 0 0
+ITEM 46 508 1 0 0 0 0 0
+ITEM 47 512 1 0 0 0 0 0

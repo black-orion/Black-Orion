@@ -1,0 +1,25 @@
+NAME "MaDa_Bolpor"
+MOVER 227
+
+POS 3831.7 59 4356.61
+WORLD 1
+ROTATION 3150
+SIZE 100
+
+PAGE 0
+	2800
+	2801
+	2802
+	2803
+	2804
+	2805
+	2827
+	2828
+	2829
+	2830
+END
+
+TEXT 20 "Willkommen, Willkommen.
+Mein Name ist Bolpor und
+ich bin ein
+Nahrungshändler."

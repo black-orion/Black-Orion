@@ -1,0 +1,11 @@
+NAME "MaSa_Wingyei"
+MOVER 225
+
+POS 8483.72 100.6 3810.27
+WORLD 1
+ROTATION 360
+SIZE 100
+
+DIALOG "MaSa_Wingyei.as"
+
+TEXT 20 "Bonjour voulez-vous devenir magicien ?"

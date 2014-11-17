@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/21/trunk/libs/boost/config/abi
+END
+msvc_suffix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/21/trunk/libs/boost/config/abi/msvc_suffix.hpp
+END
+borland_prefix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/21/trunk/libs/boost/config/abi/borland_prefix.hpp
+END
+borland_suffix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/21/trunk/libs/boost/config/abi/borland_suffix.hpp
+END
+msvc_prefix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/21/trunk/libs/boost/config/abi/msvc_prefix.hpp
+END

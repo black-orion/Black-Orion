@@ -1,0 +1,20 @@
+NAME "MaSa_Colack"
+MOVER 215
+
+POS 8369.51 100 3676.5
+WORLD 1
+ROTATION 10
+SIZE 100
+
+PAGE 0
+	2007
+	2009
+	2011
+	2013
+	2015
+	2017
+END
+	
+TEXT 20 "Schilde zu verkaufen!
+Bitte in einer Reihe
+aufstellen."

@@ -1,0 +1,3 @@
+UPGR 3
+	DST_HP_RATE 5
+END

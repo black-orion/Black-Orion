@@ -1,0 +1,185 @@
+#ifndef E_STAT_H
+#define E_STAT_H
+
+
+#include "Base.h"
+
+
+enum E_STAT
+{
+	DST_NONE = 0,
+	DST_STR = 1, //STR
+	DST_DEX, //DEX
+	DST_INT, //INT
+	DST_STA, //STA
+	DST_YOY_DMG, //Yoyo atk
+	DST_BOW_DMG, //Bow atk
+	DST_CHR_RANGE,
+	DST_BLOCK_RANGE, //Fernkampfblockrate
+	DST_CHR_CHANCECRITICAL, //Critrate 1 = 1%
+	DST_CHR_BLEEDING,
+	DST_SPEED, //Laufgeschwindigkeit
+	DST_ABILITY_MIN, //MinAtk
+	DST_ABILITY_MAX, //MaxAtk
+	DST_BLOCK_MELEE, //Nahkampfblockrate
+	DST_MASTRY_EARTH,
+	DST_STOP_MOVEMENT,
+	DST_MASTRY_FIRE,
+	DST_MASTRY_WATER,
+	DST_MASTRY_ELECTRICITY,
+	DST_MASTRY_WIND,
+	DST_KNUCKLE_DMG, //Knuckle Dmg
+	DST_PVP_DMG_RATE,
+	//23
+	DST_ATTACKSPEED = 24, //ATKSPD 20 = 1%
+	DST_SWD_DMG, //Sword Dmg
+	DST_ADJDEF, //Def
+	DST_RESIST_MAGIC,
+	DST_RESIST_ELECTRICITY,
+	DST_REFLECT_DAMAGE,
+	DST_RESIST_FIRE,
+	DST_RESIST_WIND,
+	DST_RESIST_WATER,
+	DST_RESIST_EARTH,
+	DST_AXE_DMG, //Axe atk
+	DST_HP_MAX, //HP max
+	DST_MP_MAX, //MP max
+	DST_FP_MAX, //FP max
+	DST_HP, //Curr HP
+	DST_MP, //Curr MP
+	DST_FP, //Curr FP
+	DST_HP_RECOVERY, //HP reg
+	DST_MP_RECOVERY, //MP reg
+	DST_FP_RECOVERY, //FP reg
+	DST_KILL_HP,
+	DST_KILL_MP,
+	DST_KILL_FP,
+	DST_ADJ_HITRATE, //Hitrate
+	//48
+	DST_CLEARBUFF = 49,
+	DST_CHR_STEALHP_IMM,
+	DST_ATTACKSPEED_RATE,
+	DST_HP_MAX_RATE, //Max HP rate
+	DST_MP_MAX_RATE, //Max MP rate
+	DST_FP_MAX_RATE, //Max FP rate
+	DST_CHR_WEAEATKCHANGE,
+	DST_CHR_STEALHP,
+	DST_CHR_CHANCESTUN,
+	DST_AUTOHP,
+	DST_CHR_CHANCEDARK,
+	DST_CHR_CHANCEPOISON,
+	DST_IMMUNITY,
+	DST_ADDMAGIC,
+	DST_CHR_DMG, //Additional Damage
+	DST_CHRSTATE,
+	DST_PARRY,
+	DST_ATKPOWER_RATE, //% ATK
+	DST_EXPERIENCE,
+	DST_JUMPING,
+	DST_CHR_CHANCESTEALHP,
+	DST_CHR_CHANCEBLEEDING,
+	DST_RECOVERY_EXP,
+	DST_ADJDEF_RATE, //% DEF
+	DST_MP_DEC_RATE,
+	DST_FP_DEC_RATE,
+	DST_SPELL_RATE,
+	DST_CAST_CRITICAL_RATE,
+	DST_CRITICAL_BONUS, //ADoCH
+	DST_SKILL_LEVEL,
+	DST_MONSTER_DMG,
+	DST_PVP_DMG, //PvP Dmg
+	DST_MELEE_STEALHP,
+	DST_HEAL,
+	DST_ATKPOWER,
+	//84
+	DST_ONEHANDMASTER_DMG = 85,
+	DST_TWOHANDMASTER_DMG,
+	DST_YOYOMASTER_DMG,
+	DST_BOWMASTER_DMG,
+	DST_KNUCKLEMASTER_DMG,
+	DST_HAWKEYE_RATE,
+	DST_RESIST_MAGIC_RATE,
+	DST_GIFTBOX,
+
+	MAX_ADJPARAMARY = 93,
+
+	//!! numbers changed
+	DST_GOLD = 100, //(10000)
+	DST_PXP = 101,
+	DST_RESIST_ALL = 102,
+	DST_STAT_ALLUP = 103,
+	DST_HPDMG_UP = 104, //zu gar nichts gut
+	DST_DEFHITRATE_DOWN = 105,
+	DST_CURECHR = 106, // DST_CHRSTATE
+	DST_HP_RECOVERY_RATE = 107, // HPRecovery Rate
+	DST_MP_RECOVERY_RATE = 108, // MPRecovery Rate
+	DST_FP_RECOVERY_RATE = 109, // FPRecovery Rate
+	DST_LOCOMOTION = 110, // JUMP & SPEED
+	DST_MASTRY_ALL = 111,
+	DST_ALL_RECOVERY = 112,
+	DST_ALL_RECOVERY_RATE = 113,
+	DST_KILL_ALL = 114,
+	DST_KILL_HP_RATE = 115,
+	DST_KILL_MP_RATE = 116,
+	DST_KILL_FP_RATE = 117,
+	DST_KILL_ALL_RATE = 118,
+	DST_ALL_DEC_RATE = 119,
+
+	COUNT_OF_STATS
+};
+
+
+E_STAT stat(const char *_title);
+
+E_STAT stat(s32 _id);
+
+const char *statTitle(E_STAT _stat);
+
+
+/// StatEffect ///
+//////////////////
+
+struct IStatEffect
+{
+	E_STAT Type;
+
+	s32 Amount;
+
+	IStatEffect()
+		: Type(DST_NONE)
+		, Amount(0)
+	{
+	}
+
+	IStatEffect(E_STAT _type, s32 _amount)
+		: Type(_type)
+		, Amount(_amount)
+	{
+	}
+
+	void reset()
+	{
+		Type = DST_NONE;
+		Amount = 0;
+	}
+
+	void set(E_STAT _type, s32 _amount)
+	{
+		Type = _type;
+		Amount = _amount;
+	}
+
+	bool isNull()
+	{
+		return (Type == DST_NONE ||
+			Amount == 0);
+	}
+
+	bool isValid()
+	{
+		return (stat(Type) == Type);
+	}
+};
+
+
+#endif //E_STAT_H

@@ -1,0 +1,58 @@
+public void SendCSPetSpawn(Pet pet)
+        {
+            MergedPacket pak = new MergedPacket(pet.dwObjectID, EPacketCommands.ObjectSpawn);
+            pak.AddObjectHeader(pet);
+            pak.Addint16(0);  //sometime 15 why ?
+            pak.Addbyte(0);
+            pak.Addint32(pet.c_petdata.dwAddHp);
+            pak.Addint64(0);
+            //pak.Addint32(1);
+            pak.Addbyte(1);
+            pak.Addint32(-1);
+            pak.Addbyte(0);
+            pak.Addint32(-1); // item count 0, because pets don't have items...
+            pak.Addint32(0);
+            pak.Addint32(0);
+            pak.Addint32(0);
+            pak.Addbyte(0);            
+            pak.Addfloat(1F);
+            pak.Addint32(0);
+            SendPacket(pak);
+            pak = null;
+        }
+        public void SendNPCSpawn(NPC npc)
+        {
+            if (npc is Pet)
+            {
+                SendCSPetSpawn((Pet)npc);
+                return;
+            }        
+            MergedPacket pak = new MergedPacket(npc.dwObjectID, EPacketCommands.ObjectSpawn);
+            pak.AddObjectHeader(npc);            
+            pak.Addint16(1); //parfois 0... Motion
+            pak.Addbyte(0); //bool est un joueur
+            pak.Addint32(npc.bCanbeSelected ? 1:0); //bool can be selected
+            pak.Addint32(1); //StateFlag
+            pak.Addint32(0);//ForceSetState
+            pak.Addbyte(npc.c_monsterdata.dwBelligerence);  //Belligerance 1=peacefull 0 = PK
+            pak.Addint32(-1);//m_dwMoverSfxId
+            pak.Addbyte(npc.c_data.HairID); //hairid
+            pak.Addint32(npc.c_data.Haircolor); //haircolor
+            pak.Addbyte(npc.c_data.FaceID);   //faceID         
+            pak.Addstring(npc.strType);
+            pak.Addbyte(npc.c_data.dwItems.Count); // item count
+            for (int i = 0; i < npc.c_data.dwItems.Count; i++)
+            {
+                pak.Addbyte(GameServer.sdctItemData[npc.c_data.dwItems[i]].dwParts); // item pos
+                pak.Addint16(npc.c_data.dwItems[i]); // item ID
+            }
+            pak.Addbyte(0); //m_bActiveAttack agressivité comme pour les monstres
+            pak.Addbyte(0); //m_nMovePattern 
+            pak.Addbyte(0); //m_nMoveEvent 
+            pak.Addint32(0);//m_nMoveEventCnt                     
+            pak.Addfloat(1); //speedfactor
+            pak.Addint32(0); //buffcount
+            //Console.WriteLine("le packet spawnnpc est parti : type {0}  ",npc.strType);
+            SendPacket(pak);
+            //pak = null;
+        }

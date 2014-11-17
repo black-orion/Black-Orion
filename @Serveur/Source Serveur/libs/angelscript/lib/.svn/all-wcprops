@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/14/trunk/libs/angelscript/lib
+END
+angelscript.lib
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/14/trunk/libs/angelscript/lib/angelscript.lib
+END
+libAngelScript.a
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/14/trunk/libs/angelscript/lib/libAngelScript.a
+END
+angelscriptd.lib
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/14/trunk/libs/angelscript/lib/angelscriptd.lib
+END

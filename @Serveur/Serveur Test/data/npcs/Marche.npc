@@ -1,0 +1,54 @@
+NAME "MaFl_Marche"
+MOVER 214
+
+POS 7169.17 100 3271.16
+WORLD 1
+ROTATION 190
+SIZE 100
+
+PAGE 0
+	231
+	233
+	235
+	237
+END
+
+PAGE 1
+	281
+	283
+	285
+	287
+END
+
+PAGE 2
+	4803
+	4805
+	4804
+	4806
+END
+
+PAGE 3
+	714
+	744
+	1674
+	1644
+	1374
+	1344
+	1074
+	1044
+	1345
+	745
+	1645
+	1675
+	1345
+	1375
+	1045
+	1075
+END
+
+TEXT 20 "Hast du jemals von einer
+fantastischen und
+magischen Welt geträumt?
+Der Magieladen von
+Marche macht es
+vielleicht möglich!"

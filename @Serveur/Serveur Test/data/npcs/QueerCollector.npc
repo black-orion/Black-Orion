@@ -1,0 +1,9 @@
+NAME "MaSa_QueerCollector"
+MOVER 691
+
+POS 8383.2 145 4085.15
+WORLD 1
+ROTATION 0
+SIZE 100
+
+TEXT 20 "Hallo!"

@@ -1,0 +1,15 @@
+NAME "MaSa_Leann"
+MOVER 212
+
+POS 8478.1 100 3634.13
+WORLD 1
+ROTATION 0
+SIZE 100
+
+PAGE 0
+	4405
+END
+
+TEXT 20 "Kann ich dir helfen?
+Wenn du Fragen hast,
+frage mich ruhig."

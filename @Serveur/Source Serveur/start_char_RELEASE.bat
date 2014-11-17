@@ -1,0 +1,1 @@
+START /D.\ Release/black-orion.exe /char

@@ -1,0 +1,63 @@
+------------------------
+- Black Orion Commande  -
+------------------------
+
+
+Nom des commandes   Parametre                                                      Acces Nessesaire                Description
+=================   ==========                                                  =====================              ===========
+
+info                                                                                     70                        displays some information
+coin                                                                                     70                        ...
+dice               [int:faces]                                                           70                        ...
+penya              [int]                                                                 100                       ...
+level,lvl          [int]                                                                 100                       ...
+accesslevel,al     [int]                                                                 100                       can lower your AL
+clearinv                                                                                 70                        not working
+dropinv                                                                                  70                        not working
+shout              [string:text]                                                         100                       shout below level 20
+item               [int:id] [int:count] [int:upgr] [int:ele] [int:eleup]                 100                       creates an item in the inv
+stat,st            [string:type] [int:delta]                                             100                       types: str,sta,dex,int
+notice,n           [string:text]                                                         100                       ...
+pos                                                                                      70                        displays the server sided pos
+name               [string:charname]                                                     100                       changes your name (relog necessary)
+exp                [int64]                                                               100                       sets the exp
+addexp             [int64]                                                               100                       adds exp
+kill               [string:charname]                                                     100                       kills the player
+job                [int]                                                                 100                       changes the job
+points,pts         [int]                                                                 100                       changes points
+getpoints,gp                                                                             70                        displayers points
+playerinfo         [string:charname]                                                     100                       displays some information
+immortal,imm                                                                             100                       not working
+onehit,oh                                                                                100                       not working
+god                                                                                      100                       immortal + onehit
+setacclvl          [string:charname] [int]                                               100                       change the player's AL
+mob                [int:id] [int:count] [float:radius] [float:aggro]                     100                       spawns some temp mobs
+createspawn        [int:id] [int:count] [float:radius] [float:agg] [int:size]            100                       spawns non-temp mobs
+createitemlist     [int:type]                                                            100                       type 0 or 1 to save a file
+place,teleplace    [string]                                                              100                       place list below
+ban                [string:charname] [uint:days] [uint:hours]                            100                       bans for the given time
+pvp                [int]                                                                 100                       
+pk                 [int]                                                                 100                       
+disp               [int]                                                                 100                       
+weather            [int:type]                                                            100                       -1 = normal (random), 0 = none, 1 = snow, 2 = rain
+
+
+
+ #place disponible
+====================
+
+- flaris, fl
+- creation
+- flbw 
+- madren
+- mas
+- sm, saint
+- darkon, darken
+- mine, dekane
+- cw
+- gm, desert
+- chaner
+- babari
+- glaphan
+- azria
+- volcano

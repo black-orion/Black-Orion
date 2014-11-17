@@ -1,0 +1,11 @@
+NAME "MaFl_Hyuit"
+MOVER 214
+
+POS 7152.51 99.9986 3242.4
+WORLD 1
+ROTATION 2900
+SIZE 100
+
+DIALOG "MaFl_Hyuit.as"
+
+TEXT 20 "Engagez-vous en tant que mercenaires!"

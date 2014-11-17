@@ -1,0 +1,11 @@
+NAME "MaSa_Bowler"
+MOVER 201
+
+POS 9560.029 90.325 263.419
+WORLD 1
+ROTATION 2650
+SIZE 100
+
+TEXT 20 "Brauchst du etwas
+Spezielles? Das ist ein
+besonderer Topf."

@@ -1,0 +1,26 @@
+NAME "MaSa_Karin"
+MOVER 217
+
+POS 8359.43 100 3640.24
+WORLD 1
+ROTATION 270
+SIZE 100
+
+PAGE 0
+	2800
+	2801
+	2802
+	2803
+	2804
+	2805
+	2827
+	2828
+	2829
+	2830
+END
+
+TEXT 20 "In einem gesunden
+Körper steckt ein
+gesunder Geist! Hier gibt
+es das leckere Essen von
+Karin! Es ist sehr gesund!"

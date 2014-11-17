@@ -1,0 +1,15 @@
+NAME "MaFl_Mustang"
+MOVER 226
+
+POS 7153.92 99.9986 3244.07
+WORLD 1
+ROTATION 2320
+SIZE 100
+
+
+DIALOG "MaFl_Mustang.as"
+
+
+TEXT 20 "Bonjour mon petit !
+Viens me voir ! 
+Je vais te faire devenire mercenaire"

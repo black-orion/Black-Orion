@@ -1,0 +1,16 @@
+NAME "MaDa_Ollien"
+MOVER 224
+
+POS 3829.78 59.1 4457.24
+WORLD 1
+ROTATION 1900
+SIZE 100
+
+PAGE 0
+	26456
+END
+
+TEXT 20 "Willst du etwas bei der
+Stadtverwaltung erfragen?
+Dann solltest du Ollien
+besuchen."

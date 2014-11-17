@@ -1,0 +1,11 @@
+NAME "MaFl_Official"
+MOVER 220
+
+POS 6960.41 100 3204.27
+WORLD 1
+ROTATION 350
+SIZE 100
+
+DIALOG "MaFl_Official.as"
+
+TEXT 20 "Bienvenus a Flarine"

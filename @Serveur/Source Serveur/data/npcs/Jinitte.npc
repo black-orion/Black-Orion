@@ -1,0 +1,25 @@
+NAME "MaDa_Jinitte"
+MOVER 222
+
+POS 3208.39 10.1552 3437.29
+WORLD 1
+ROTATION 630
+SIZE 100
+
+PAGE 0
+	2800
+	2801
+	2802
+	2803
+	2804
+	2805
+	2827
+	2828
+	2829
+	2830
+END
+
+TEXT 20 "Willkommen in Jinittes
+Restaurant! Wir haben
+das beste Nomadenessen
+in der Gegend."

@@ -1,0 +1,113 @@
+MOB 949 	//MI_DANTALIAN04
+PENYA 700 1100
+
+ITEM 22029 0.001050 		 //Legendary Golden Sword (0.105000%)
+ITEM 22033 0.001050 		 //Legendary Golden Big Sword (0.105000%)
+ITEM 22037 0.001050 		 //Legendary Golden Axe (0.105000%)
+ITEM 22041 0.001050 		 //Legendary Big Golden Axe (0.105000%)
+ITEM 22045 0.001050 		 //Legendary Golden Gloves (0.105000%)
+ITEM 22049 0.001050 		 //Legendary Golden Stick (0.105000%)
+ITEM 22061 0.001050 		 //Legendary Golden Wand (0.105000%)
+ITEM 22065 0.001050 		 //Legendary Golden Staff (0.105000%)
+ITEM 22053 0.001050 		 //Legendary Golden Bow (0.105000%)
+ITEM 22057 0.001050 		 //Legendary Golden Yo-Yo (0.105000%)
+ITEM 2035 0.000818 		 //Sunstone (0.081833%)
+ITEM 2036 0.000419 		 //Moonstone (0.041867%)
+ITEM 26470 0.000500 		 //Gore Necklace (0.050000%)
+ITEM 26471 0.000500 		 //Mental Necklace (0.050000%)
+
+ITEMSPC
+	ID 26472 		 //Peision Necklace
+	COUNT 1
+	RATE 0.000500 	//0.050000%
+	UPGR 1
+ENDSPC
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.000500 	//0.050000%
+	UPGR 1
+ENDSPC
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.000500 	//0.050000%
+	UPGR 3
+ENDSPC
+
+ITEMSPC
+	ID 26472 		 //Peision Necklace
+	COUNT 1
+	RATE 0.000500 	//0.050000%
+	UPGR 4
+ENDSPC
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.000500 	//0.050000%
+	UPGR 3
+ENDSPC
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.000500 	//0.050000%
+	UPGR 7
+ENDSPC
+
+ITEMSPC
+	ID 26472 		 //Peision Necklace
+	COUNT 1
+	RATE 0.000500 	//0.050000%
+	UPGR 7
+ENDSPC
+
+ITEMSPC
+	ID 26466 		 //Arek Ring
+	COUNT 1
+	RATE 0.001000 	//0.100000%
+	UPGR 3
+ENDSPC
+
+ITEMSPC
+	ID 26465 		 //Stam Ring 
+	COUNT 1
+	RATE 0.001000 	//0.100000%
+	UPGR 3
+ENDSPC
+
+ITEMSPC
+	ID 26466 		 //Arek Ring
+	COUNT 1
+	RATE 0.000833 	//0.083333%
+	UPGR 4
+ENDSPC
+
+ITEMSPC
+	ID 26465 		 //Stam Ring 
+	COUNT 1
+	RATE 0.000833 	//0.083333%
+	UPGR 4
+ENDSPC
+
+ITEM 3216 0.000667 		 //Generator Card (0.066667%)
+ITEM 3206 0.000667 		 //Flame Card (0.066667%)
+ITEM 3211 0.000667 		 //River Card (0.066667%)
+ITEM 3226 0.000667 		 //Cyclone Card (0.066667%)
+ITEM 3221 0.000667 		 //Desert Card (0.066667%)
+ITEM 3216 0.001667 		 //Generator Card (0.166667%)
+ITEM 3211 0.001667 		 //River Card (0.166667%)
+ITEM 3206 0.001667 		 //Flame Card (0.166667%)
+ITEM 3226 0.001667 		 //Cyclone Card (0.166667%)
+ITEM 3221 0.001667 		 //Desert Card (0.166667%)
+ITEM 2551 0.036667 		 //VitalDrink 800 (3.666667%)
+ITEM 2537 0.140000 		 //Eighth Refresher (14.000000%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)
+ITEM 3021 0.066667 		 //Magic Bead (6.666667%)

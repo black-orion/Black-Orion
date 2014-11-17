@@ -1,0 +1,4 @@
+//Command name, file name, access level
+
+notice            "notice.as"    100
+job               "job.as"       100

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="Main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="515" topLine="0" />
+	</File>
+	<File name="Main.h" open="1" top="0" tabpos="3">
+		<Cursor position="64" topLine="20" />
+	</File>
+	<File name="core\ConfigReader.h" open="1" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="core\Console.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="7173" topLine="374" />
+	</File>
+	<File name="core\Core.h" open="1" top="0" tabpos="11">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="core\CoreBase.h" open="1" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="core\FileList.h" open="1" top="0" tabpos="12">
+		<Cursor position="116" topLine="0" />
+	</File>
+	<File name="core\System.cpp" open="1" top="1" tabpos="13">
+		<Cursor position="205" topLine="12" />
+	</File>
+	<File name="world\ChatHandler.h" open="1" top="0" tabpos="4">
+		<Cursor position="86" topLine="72" />
+	</File>
+	<File name="world\CommandScriptEnv.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="world\CommandScriptEnv.h" open="1" top="0" tabpos="5">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="world\DropObject.h" open="1" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="world\MailManager.h" open="1" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

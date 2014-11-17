@@ -1,0 +1,36 @@
+NAME "MaDa_Achaben"
+MOVER 229
+
+POS 3879.86 59 4458.07
+WORLD 1
+ROTATION 180
+SIZE 100
+
+PAGE 0
+	2026
+	2027
+END
+
+PAGE 1
+	2530
+	2544
+	2531
+	2545
+	2532
+	2546
+	2533
+	2548
+	2534
+END
+
+PAGE 2
+	2028
+END
+
+PAGE 3
+	2893
+	2894
+	2895
+END
+TEXT 20 "Willkommen im Geschäft
+von Achaben! *hust*"

@@ -1,0 +1,41 @@
+MOB 925 	//MI_HARPY04
+PENYA 464 673
+
+ITEM 22026 0.001050 		 //Guardian Sword (0.105000%)
+ITEM 22030 0.001050 		 //Guardian Big Sword (0.105000%)
+ITEM 22034 0.001050 		 //Guardian Axe (0.105000%)
+ITEM 22038 0.001050 		 //Guardian Ambidextrous Axe (0.105000%)
+ITEM 22042 0.001050 		 //Guardian Knuckle (0.105000%)
+ITEM 22046 0.001050 		 //Guardian Stick (0.105000%)
+ITEM 22058 0.001050 		 //Guardian Wand (0.105000%)
+ITEM 22062 0.001050 		 //Guardian Staff (0.105000%)
+ITEM 22050 0.001050 		 //Guardian Bow (0.105000%)
+ITEM 22054 0.001050 		 //Guardian Yo-Yo (0.105000%)
+
+ITEMSPC
+	ID 26464 		 //Vigor Ring
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 4
+ENDSPC
+
+ITEMSPC
+	ID 26467 		 //Intelli Ring
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 4
+ENDSPC
+
+ITEM 3221 0.001250 		 //Desert Card (0.125000%)
+ITEM 3221 0.002500 		 //Desert Card (0.250000%)
+ITEM 2035 0.001002 		 //Sunstone (0.100208%)
+ITEM 2036 0.000520 		 //Moonstone (0.052000%)
+ITEM 3015 0.333333 		 //Harpy Feather (33.333333%)
+ITEM 3015 0.333333 		 //Harpy Feather (33.333333%)
+ITEM 2551 0.036667 		 //VitalDrink 800 (3.666667%)
+ITEM 2537 0.140000 		 //Eighth Refresher (14.000000%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)

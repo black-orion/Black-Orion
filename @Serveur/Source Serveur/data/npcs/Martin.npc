@@ -1,0 +1,65 @@
+NAME "MaSa_Martin"
+MOVER 218
+
+POS 8315.52 100 3728.63
+WORLD 1
+ROTATION 0
+SIZE 100
+
+PAGE 0
+	233
+	235
+	237
+	239
+	241
+	243
+	245
+	247
+	249
+END
+
+PAGE 1
+	283
+	285
+	287
+	289
+	291
+	293
+	295
+	297
+	299
+END
+
+PAGE 2
+	4803
+	4805
+	4804
+	4806
+END
+
+PAGE 3
+	1044
+	1074
+	715
+	745
+	1645
+	1675
+	1345
+	1375
+	1045
+	1075
+	716
+	746
+	1646
+	1676
+	1346
+	1376
+	1046
+	1076
+END
+
+TEXT 20 "Willst du großartige und
+mächtige Magie
+verwenden können? Dann
+solltest du mich
+besuchen!"

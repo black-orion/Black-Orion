@@ -1,0 +1,11 @@
+NAME "MaFl_FlaMayor"
+MOVER 12
+
+POS 6960.03 100 3227.32
+WORLD 1
+ROTATION 0
+SIZE 100
+
+DIALOG "fl_mayor.as"
+
+TEXT 20 "Bienvenue a Flarine ! Je suis maire de cette vile"

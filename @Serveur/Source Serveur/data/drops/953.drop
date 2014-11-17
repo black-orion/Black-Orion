@@ -1,0 +1,97 @@
+MOB 953 	//MI_GANESA04
+PENYA 700 1100
+
+ITEM 22029 0.001350 		 //Legendary Golden Sword (0.135000%)
+ITEM 22033 0.001350 		 //Legendary Golden Big Sword (0.135000%)
+ITEM 22037 0.001350 		 //Legendary Golden Axe (0.135000%)
+ITEM 22041 0.001350 		 //Legendary Big Golden Axe (0.135000%)
+ITEM 22045 0.001350 		 //Legendary Golden Gloves (0.135000%)
+ITEM 22049 0.001350 		 //Legendary Golden Stick (0.135000%)
+ITEM 22061 0.001350 		 //Legendary Golden Wand (0.135000%)
+ITEM 22065 0.001350 		 //Legendary Golden Staff (0.135000%)
+ITEM 22053 0.001350 		 //Legendary Golden Bow (0.135000%)
+ITEM 22057 0.001350 		 //Legendary Golden Yo-Yo (0.135000%)
+ITEM 2035 0.000818 		 //Sunstone (0.081833%)
+ITEM 2036 0.000419 		 //Moonstone (0.041867%)
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.001000 	//0.100000%
+	UPGR 4
+ENDSPC
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.001000 	//0.100000%
+	UPGR 11
+ENDSPC
+
+ITEMSPC
+	ID 26472 		 //Peision Necklace
+	COUNT 1
+	RATE 0.001000 	//0.100000%
+	UPGR 11
+ENDSPC
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.000333 	//0.033333%
+	UPGR 5
+ENDSPC
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.000333 	//0.033333%
+	UPGR 15
+ENDSPC
+
+ITEMSPC
+	ID 26472 		 //Peision Necklace
+	COUNT 1
+	RATE 0.000333 	//0.033333%
+	UPGR 14
+ENDSPC
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.000167 	//0.016667%
+	UPGR 6
+ENDSPC
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.000167 	//0.016667%
+	UPGR 15
+ENDSPC
+
+ITEMSPC
+	ID 26472 		 //Peision Necklace
+	COUNT 1
+	RATE 0.000167 	//0.016667%
+	UPGR 19
+ENDSPC
+
+ITEM 3204 0.000067 		 //Volcano Card(2%) (0.006667%)
+ITEM 3207 0.000033 		 //Volcano Card(4%) (0.003333%)
+ITEM 3209 0.000067 		 //Ocean Card(2%) (0.006667%)
+ITEM 3212 0.000033 		 //Ocean Card(4%) (0.003333%)
+ITEM 3214 0.000067 		 //Lightning Card(2%) (0.006667%)
+ITEM 3217 0.000033 		 //Lightning Card(4%) (0.003333%)
+ITEM 3219 0.000067 		 //Earthquake Card(2%) (0.006667%)
+ITEM 3222 0.000033 		 //Earthquake Card(4%) (0.003333%)
+ITEM 3224 0.000067 		 //Vacuum Card(2%) (0.006667%)
+ITEM 3227 0.000033 		 //Vacuum Card(4%) (0.003333%)
+ITEM 2551 0.036667 		 //VitalDrink 800 (3.666667%)
+ITEM 2537 0.140000 		 //Eighth Refresher (14.000000%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)
+ITEM 3022 0.066667 		 //Strange Ivory (6.666667%)

@@ -1,0 +1,54 @@
+NAME "MaFl_Luda"
+MOVER 215
+
+POS 6927.3 100 3236.48
+WORLD 1
+ROTATION 10
+SIZE 100
+
+PAGE 0
+	21
+	23
+	25
+	81
+	27
+	61
+	83
+END
+
+PAGE 1
+	502
+	504
+	500
+	501
+	506
+	508
+	510
+	512
+	511
+	513
+	507
+	509
+	503
+	505
+	514
+	515
+	520
+	521
+	518
+	519
+	516
+	517
+END
+
+PAGE 2
+	2001
+	2003
+	2005
+	2007
+	2009
+END
+
+DIALOG "MaFl_Luda.as"
+
+TEXT 20 "Hey toi la , viens voir mes armes pour vagabonds!"

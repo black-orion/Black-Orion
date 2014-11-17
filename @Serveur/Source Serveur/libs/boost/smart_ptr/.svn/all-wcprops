@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr
+END
+shared_ptr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/shared_ptr.hpp
+END
+scoped_array.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/scoped_array.hpp
+END
+weak_ptr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/weak_ptr.hpp
+END
+intrusive_ptr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/intrusive_ptr.hpp
+END
+bad_weak_ptr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/bad_weak_ptr.hpp
+END
+scoped_ptr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/scoped_ptr.hpp
+END
+make_shared.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/make_shared.hpp
+END
+shared_array.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/shared_array.hpp
+END
+enable_shared_from_this.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/enable_shared_from_this.hpp
+END
+enable_shared_from_this2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/13/trunk/libs/boost/smart_ptr/enable_shared_from_this2.hpp
+END

@@ -1,0 +1,42 @@
+MOB 123 	//MI_MIA4
+PENYA 229 332
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.010000 	//1.000000%
+	UPGR 7
+ENDSPC
+
+ITEMSPC
+	ID 26472 		 //Peision Necklace
+	COUNT 1
+	RATE 0.010000 	//1.000000%
+	UPGR 7
+ENDSPC
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.010000 	//1.000000%
+	UPGR 3
+ENDSPC
+
+ITEM 6502 0.010000 		 //Zirkan Sword (1.000000%)
+ITEM 6552 0.010000 		 //PaPang Stick (1.000000%)
+ITEM 6602 0.010000 		 //Dazzle Wand (1.000000%)
+ITEM 6702 0.010000 		 //Papanew Staff (1.000000%)
+ITEM 6802 0.010000 		 //Prenil Knuckle (1.000000%)
+ITEM 6902 0.010000 		 //Crest Axe (1.000000%)
+ITEM 3206 0.001250 		 //Flame Card (0.125000%)
+ITEM 3206 0.002500 		 //Flame Card (0.250000%)
+ITEM 2035 0.001002 		 //Sunstone (0.100208%)
+ITEM 2036 0.000520 		 //Moonstone (0.052000%)
+ITEM 2969 0.066667 		 //Mia Doll (6.666667%)
+ITEM 2969 0.066667 		 //Mia Doll (6.666667%)
+ITEM 2532 0.140000 		 //Third Refresher (14.000000%)
+ITEM 2802 0.333333 		 //Chocolate Bar (33.333333%)
+ITEM 2802 0.333333 		 //Chocolate Bar (33.333333%)
+ITEM 2802 0.333333 		 //Chocolate Bar (33.333333%)
+ITEM 2818 0.200000 		 //Pineapple Cone (20.000000%)
+ITEM 2818 0.200000 		 //Pineapple Cone (20.000000%)

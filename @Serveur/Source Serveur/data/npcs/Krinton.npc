@@ -1,0 +1,15 @@
+NAME "MaDa_Krinton"
+MOVER 223
+
+POS 3742.22 59 4413.74
+WORLD 1
+ROTATION 840
+SIZE 100
+
+PAGE 0
+	2017
+	2019
+END
+
+TEXT 20 "Ich verkaufe Schilde.
+Schau dich bitte um."

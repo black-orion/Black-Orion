@@ -1,0 +1,48 @@
+MOB 571 	//MI_SYLIACA4
+PENYA 592 860
+
+ITEM 22026 0.001200 		 //Guardian Sword (0.120000%)
+ITEM 22030 0.001200 		 //Guardian Big Sword (0.120000%)
+ITEM 22034 0.001200 		 //Guardian Axe (0.120000%)
+ITEM 22038 0.001200 		 //Guardian Ambidextrous Axe (0.120000%)
+ITEM 22042 0.001200 		 //Guardian Knuckle (0.120000%)
+ITEM 22046 0.001200 		 //Guardian Stick (0.120000%)
+ITEM 22058 0.001200 		 //Guardian Wand (0.120000%)
+ITEM 22062 0.001200 		 //Guardian Staff (0.120000%)
+ITEM 22050 0.001200 		 //Guardian Bow (0.120000%)
+ITEM 22054 0.001200 		 //Guardian Yo-Yo (0.120000%)
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 5
+ENDSPC
+
+ITEMSPC
+	ID 26466 		 //Arek Ring
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 3
+ENDSPC
+
+ITEMSPC
+	ID 26465 		 //Stam Ring 
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 3
+ENDSPC
+
+ITEM 3216 0.001250 		 //Generator Card (0.125000%)
+ITEM 3216 0.002500 		 //Generator Card (0.250000%)
+ITEM 2035 0.001002 		 //Sunstone (0.100208%)
+ITEM 2036 0.000520 		 //Moonstone (0.052000%)
+ITEM 2986 0.033333 		 //Sycale (3.333333%)
+ITEM 2986 0.033333 		 //Sycale (3.333333%)
+ITEM 2550 0.036667 		 //VitalDrink 700 (3.666667%)
+ITEM 2536 0.140000 		 //Seventh Refresher (14.000000%)
+ITEM 2812 0.333333 		 //Steamed Seafood (33.333333%)
+ITEM 2812 0.333333 		 //Steamed Seafood (33.333333%)
+ITEM 2812 0.333333 		 //Steamed Seafood (33.333333%)
+ITEM 2823 0.200000 		 //Fruit Sherbet (20.000000%)
+ITEM 2823 0.200000 		 //Fruit Sherbet (20.000000%)

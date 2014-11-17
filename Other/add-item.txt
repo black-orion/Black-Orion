@@ -1,0 +1,87 @@
+	http://www.multiupload.com/XRAAN9WX7A
+
+//structure des items
+public static void AddItemData(this Packet pak, Item item)
+        {
+            pak.Addint32(item.dwItemID);
+            pak.Addint32(0); // A different ID for every item in the server; not a must, though
+            if (item.sealinfos.sealedcharname != "")
+                pak.Addstring(item.sealinfos.sealedcharname); // Sealed character's name
+            else
+                pak.Addint32(0);
+            //pak.Addstring("none");
+            pak.Addint16(item.dwQuantity);
+            pak.Addbyte(item.sealinfos.sealedLevel); // Sealed character's level
+            //pak.Addbyte(120);
+
+            pak.Addint32(item.dwEnergy); // Durability, but according to caali it can be 0*/
+            //pak.Addint32(0);
+            pak.Addint32(item.sealinfos.sealedjob); // Sealed character job
+            //pak.Addint32(28);
+            pak.Addbyte(item.bExpired ? 1 : 0);
+            pak.Addint32(item.dwRefine);
+            pak.Addint32(0); // 32
+            pak.Addbyte(item.dwElement);
+            pak.Addint32(item.dwEleRefine);
+            pak.Addint32(0); // 41
+            pak.Addint32(item.bonuses.sockets.dwPiercings);
+            for (int i = 0; i < item.bonuses.sockets.dwPiercings; i++)
+            {
+                if (item.bonuses.sockets[i] != -1)
+                    pak.Addint32(item.bonuses.sockets[i]);
+                else
+                    pak.Addint32(0);
+            }
+            pak.Addint32(0); //a déterminer
+            pak.Addint32(item.dtLastUntil > TimeUtilities.UtcStart ? 1 : 0);
+            pak.Addint64(item.bonuses.qwMixed);//54
+            pak.Addint64(0);//new v15
+
+            if (item.dtLastUntil > DateTime.Now)
+            {
+                pak.Addint32((int)(DateTime.Now - TimeUtilities.UtcStart).TotalSeconds);
+                pak.Addint32((int)(item.dtLastUntil - DateTime.Now).TotalSeconds);
+                pak.Addbyte(0);
+            }
+            else
+            {
+                if (!item.bispet)
+                {
+                    pak.Addbyte(0); //si ce byte est different de 0 on a un pet
+                    pak.Addint32(0);
+                }
+                else
+                {
+                    pak.Addbyte(1);
+                    pak.Addbyte(item.petinf.BuffPosition);
+                    pak.Addbyte((int)item.petinf.categorie);
+                    pak.Addint32(item.petinf.Experience);
+                    pak.Addint16(item.petinf.dwHP);
+                    pak.Addint16(item.petinf.life);
+                    pak.Addbyte(item.petinf.levelD);
+                    pak.Addbyte(item.petinf.levelC);
+                    pak.Addbyte(item.petinf.levelB);
+                    pak.Addbyte(item.petinf.levelA);
+                    pak.Addbyte(item.petinf.levelS);
+                    pak.Addbyte(0);
+                    pak.Addint32(0);
+                    pak.Addint32(0);
+                }
+            }
+        }
+//structures des familiers
+        public static void AddFamilierData(this Packet pak, Familier fam)
+        {
+            pak.Addbyte(fam.BuffPosition);
+            pak.Addbyte((int)fam.categorie);
+            pak.Addint32(fam.Experience);
+            pak.Addint16(fam.dwHP);
+            pak.Addint16(fam.life);
+            pak.Addbyte(fam.levelD);
+            pak.Addbyte(fam.levelC);
+            pak.Addbyte(fam.levelB);
+            pak.Addbyte(fam.levelA);
+            pak.Addbyte(fam.levelS);
+            pak.Addbyte(0);
+            pak.Addint32(0);
+        }

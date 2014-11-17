@@ -1,0 +1,37 @@
+MOB 63 	//MI_FEFERN4
+PENYA 207 300
+
+ITEMSPC
+	ID 26470 		 //Gore Necklace
+	COUNT 1
+	RATE 0.006667 	//0.666667%
+	UPGR 1
+ENDSPC
+
+ITEMSPC
+	ID 26471 		 //Mental Necklace
+	COUNT 1
+	RATE 0.006667 	//0.666667%
+	UPGR 3
+ENDSPC
+
+ITEM 6500 0.006667 		 //Kehin Sword (0.666667%)
+ITEM 6550 0.006667 		 //Meryl Stick (0.666667%)
+ITEM 6600 0.006667 		 //Nefume Wand (0.666667%)
+ITEM 6700 0.006667 		 //Shuprim Staff (0.666667%)
+ITEM 6800 0.006667 		 //Pazion Knuckle (0.666667%)
+ITEM 6900 0.006667 		 //Grabber Axe (0.666667%)
+ITEM 7001 0.010000 		 //Battle Shield (1.000000%)
+ITEM 2957 0.333333 		 //Tarin Root (33.333333%)
+ITEM 2957 0.333333 		 //Tarin Root (33.333333%)
+ITEM 2545 0.036667 		 //VitalDrink 200 (3.666667%)
+ITEM 2531 0.140000 		 //Second Refresher (14.000000%)
+ITEM 2807 0.333333 		 //Barbecue (33.333333%)
+ITEM 2807 0.333333 		 //Barbecue (33.333333%)
+ITEM 2807 0.333333 		 //Barbecue (33.333333%)
+ITEM 2817 0.200000 		 //Strawberry Shake (20.000000%)
+ITEM 2817 0.200000 		 //Strawberry Shake (20.000000%)
+ITEM 3211 0.001250 		 //River Card (0.125000%)
+ITEM 3211 0.002500 		 //River Card (0.250000%)
+ITEM 2035 0.001002 		 //Sunstone (0.100208%)
+ITEM 2036 0.000520 		 //Moonstone (0.052000%)

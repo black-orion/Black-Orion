@@ -1,0 +1,10 @@
+NAME "MaFl_Eoners"
+MOVER 225
+
+POS 7204.65 100 3226.73
+WORLD 1
+ROTATION 480
+SIZE 100
+
+TEXT 20 "Ich bin ein glücklicher
+Eoners!"

@@ -1,0 +1,41 @@
+MOB 613 	//MI_GLAPHAN4
+PENYA 694 1006
+
+ITEM 22029 0.000900 		 //Legendary Golden Sword (0.090000%)
+ITEM 22033 0.000900 		 //Legendary Golden Big Sword (0.090000%)
+ITEM 22037 0.000900 		 //Legendary Golden Axe (0.090000%)
+ITEM 22041 0.000900 		 //Legendary Big Golden Axe (0.090000%)
+ITEM 22045 0.000900 		 //Legendary Golden Gloves (0.090000%)
+ITEM 22049 0.000900 		 //Legendary Golden Stick (0.090000%)
+ITEM 22061 0.000900 		 //Legendary Golden Wand (0.090000%)
+ITEM 22065 0.000900 		 //Legendary Golden Staff (0.090000%)
+ITEM 22053 0.000900 		 //Legendary Golden Bow (0.090000%)
+ITEM 22057 0.000900 		 //Legendary Golden Yo-Yo (0.090000%)
+
+ITEMSPC
+	ID 26464 		 //Vigor Ring
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 4
+ENDSPC
+
+ITEMSPC
+	ID 26467 		 //Intelli Ring
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 4
+ENDSPC
+
+ITEM 3206 0.001250 		 //Flame Card (0.125000%)
+ITEM 3206 0.002500 		 //Flame Card (0.250000%)
+ITEM 2035 0.001002 		 //Sunstone (0.100208%)
+ITEM 2036 0.000520 		 //Moonstone (0.052000%)
+ITEM 3009 0.333333 		 //Phanbubble (33.333333%)
+ITEM 3009 0.333333 		 //Phanbubble (33.333333%)
+ITEM 2551 0.036667 		 //VitalDrink 800 (3.666667%)
+ITEM 2537 0.140000 		 //Eighth Refresher (14.000000%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)

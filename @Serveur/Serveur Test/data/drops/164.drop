@@ -1,0 +1,127 @@
+MOB 164 	//MI_CLOCKWORK1
+PENYA 0 0
+
+ITEMSPC
+	ID 26468 		 //Demol Earring
+	COUNT 1
+	RATE 0.001667 	//0.166667%
+	UPGR 14
+ENDSPC
+
+ITEMSPC
+	ID 26469 		 //Plug Earring  
+	COUNT 1
+	RATE 0.003333 	//0.333333%
+	UPGR 10
+ENDSPC
+
+ITEMSPC
+	ID 26469 		 //Plug Earring  
+	COUNT 1
+	RATE 0.001667 	//0.166667%
+	UPGR 14
+ENDSPC
+
+ITEM 2707 0.003333 		 //Speedo+1 (0.333333%)
+ITEM 2708 0.001667 		 //Speedo+2 (0.166667%)
+ITEM 2709 0.000667 		 //Speedo+3 (0.066667%)
+
+ITEMSPC
+	ID 26464 		 //Vigor Ring
+	COUNT 1
+	RATE 0.003333 	//0.333333%
+	UPGR 9
+ENDSPC
+
+ITEMSPC
+	ID 26464 		 //Vigor Ring
+	COUNT 1
+	RATE 0.001333 	//0.133333%
+	UPGR 15
+ENDSPC
+
+ITEMSPC
+	ID 26467 		 //Intelli Ring
+	COUNT 1
+	RATE 0.003333 	//0.333333%
+	UPGR 9
+ENDSPC
+
+ITEMSPC
+	ID 26467 		 //Intelli Ring
+	COUNT 1
+	RATE 0.001333 	//0.133333%
+	UPGR 15
+ENDSPC
+
+ITEMSPC
+	ID 26466 		 //Arek Ring
+	COUNT 1
+	RATE 0.003333 	//0.333333%
+	UPGR 9
+ENDSPC
+
+ITEMSPC
+	ID 26466 		 //Arek Ring
+	COUNT 1
+	RATE 0.001333 	//0.133333%
+	UPGR 15
+ENDSPC
+
+ITEM 10296 0.100000 		 //Rukenshia Shield (10.000000%)
+ITEM 10297 0.100000 		 //Toeffin Shield (10.000000%)
+ITEM 10297 0.100000 		 //Toeffin Shield (10.000000%)
+ITEM 10298 0.100000 		 //Catepo Shield (10.000000%)
+ITEM 10200 0.100000 		 //Dretra Sword (10.000000%)
+ITEM 10201 0.100000 		 //Taytra Axe (10.000000%)
+ITEM 10202 0.100000 		 //Yakshadain Stick (10.000000%)
+ITEM 10203 0.100000 		 //Clrael Wand (10.000000%)
+ITEM 10204 0.100000 		 //Shamerel Staff (10.000000%)
+ITEM 10205 0.100000 		 //Yakadain Knuckle (10.000000%)
+ITEM 10000 0.026667 		 //Shamutra Helmet (2.666667%)
+ITEM 10001 0.016667 		 //Shamutra Suit (1.666667%)
+ITEM 10002 0.003333 		 //Shamutra Gauntlet (0.333333%)
+ITEM 10003 0.003333 		 //Shamutra Boots (0.333333%)
+ITEM 10004 0.026667 		 //Rashadain Helmet (2.666667%)
+ITEM 10005 0.016667 		 //Rashadain Suit (1.666667%)
+ITEM 10006 0.003333 		 //Rashadain Gauntlet (0.333333%)
+ITEM 10007 0.003333 		 //Rashadain Boots (0.333333%)
+ITEM 10008 0.026667 		 //Forgiel Helmet (2.666667%)
+ITEM 10009 0.016667 		 //Forgiel Suit (1.666667%)
+ITEM 10010 0.003333 		 //Forgiel Gauntlet (0.333333%)
+ITEM 10011 0.003333 		 //Forgiel Boots (0.333333%)
+ITEM 10012 0.026667 		 //Shaentra Helmet (2.666667%)
+ITEM 10013 0.016667 		 //Shaentra Suit (1.666667%)
+ITEM 10014 0.003333 		 //Shaentra Gauntlet (0.333333%)
+ITEM 10015 0.003333 		 //Shaentra Boots (0.333333%)
+ITEM 10016 0.026667 		 //Yuandain Helmet (2.666667%)
+ITEM 10017 0.016667 		 //Yuandain Suit (1.666667%)
+ITEM 10018 0.003333 		 //Yuandain Gauntlet (0.333333%)
+ITEM 10019 0.003333 		 //Yuandain Boots (0.333333%)
+ITEM 10020 0.026667 		 //Seidel Helmet (2.666667%)
+ITEM 10021 0.016667 		 //Seidel Suit (1.666667%)
+ITEM 10022 0.003333 		 //Seidel Gauntlet (0.333333%)
+ITEM 10023 0.003333 		 //Seidel Boots (0.333333%)
+ITEM 10024 0.026667 		 //Rorend Helmet (2.666667%)
+ITEM 10025 0.016667 		 //Rorend Suit (1.666667%)
+ITEM 10026 0.003333 		 //Rorend Gauntlet (0.333333%)
+ITEM 10027 0.003333 		 //Rorend Boots (0.333333%)
+ITEM 10028 0.026667 		 //Rorient Helmet (2.666667%)
+ITEM 10029 0.016667 		 //Rorient Suit (1.666667%)
+ITEM 10030 0.003333 		 //Rorient Gauntlet (0.333333%)
+ITEM 10031 0.003333 		 //Rorient Boots (0.333333%)
+
+ITEMSPC
+	ID 26468 		 //Demol Earring
+	COUNT 1
+	RATE 1.000000 	//100.000000%
+	UPGR 12
+ENDSPC
+
+ITEMSPC
+	ID 26464 		 //Vigor Ring
+	COUNT 1
+	RATE 1.000000 	//100.000000%
+	UPGR 9
+ENDSPC
+

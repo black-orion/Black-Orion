@@ -1,0 +1,41 @@
+MOB 601 	//MI_IREN4
+PENYA 560 812
+
+ITEM 22027 0.001350 		 //Historic Sword (0.135000%)
+ITEM 22031 0.001350 		 //Historic Big Sword (0.135000%)
+ITEM 22035 0.001350 		 //Historic Axe (0.135000%)
+ITEM 22039 0.001350 		 //Historic Ambidextrous Axe (0.135000%)
+ITEM 22043 0.001350 		 //Historic Knuckle (0.135000%)
+ITEM 22047 0.001350 		 //Historic Stick (0.135000%)
+ITEM 22059 0.001350 		 //Historic Wand (0.135000%)
+ITEM 22063 0.001350 		 //Historic Staff (0.135000%)
+ITEM 22051 0.001350 		 //Historic Bow (0.135000%)
+ITEM 22055 0.001350 		 //Historic Yo-Yo (0.135000%)
+
+ITEMSPC
+	ID 26464 		 //Vigor Ring
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 4
+ENDSPC
+
+ITEMSPC
+	ID 26467 		 //Intelli Ring
+	COUNT 1
+	RATE 0.001389 	//0.138867%
+	UPGR 4
+ENDSPC
+
+ITEM 3221 0.001250 		 //Desert Card (0.125000%)
+ITEM 3221 0.002500 		 //Desert Card (0.250000%)
+ITEM 2035 0.001002 		 //Sunstone (0.100208%)
+ITEM 2036 0.000520 		 //Moonstone (0.052000%)
+ITEM 3002 0.333333 		 //Renyken (33.333333%)
+ITEM 3002 0.333333 		 //Renyken (33.333333%)
+ITEM 2551 0.036667 		 //VitalDrink 800 (3.666667%)
+ITEM 2537 0.140000 		 //Eighth Refresher (14.000000%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2813 0.333333 		 //Meat Salad (33.333333%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)
+ITEM 2824 0.200000 		 //Icecream Cake (20.000000%)

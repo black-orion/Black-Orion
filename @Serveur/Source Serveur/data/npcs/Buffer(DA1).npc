@@ -1,0 +1,11 @@
+NAME "MaFl_Helper"
+MOVER 200
+
+POS 5576.793945 75.000977 3897.422363
+WORLD 1
+ROTATION 0
+SIZE 200
+
+DIALOG "fl_helper.as"
+
+TEXT 10 "Venez jeune aventurier ! Je vais vous Buff."

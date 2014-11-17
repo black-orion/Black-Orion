@@ -1,0 +1,36 @@
+//  공속  MaxHP관련  MaxMP관련  MaxFP관련  물리방어톒p회복률관련  mp회복률관련  fp회복률관련  SWD  AXE  STAFF  STICK  KNUCKLE  WAND  BLOCKING  YOYO  CRITICAL
+
+//                                     unknown                             unknown                                           add  add  add
+//JOB                    name                HPm  MPm  FPm  HPr  MPr  FPr       DfS  DfL  DfB  Swd  Axe  Stf  Stk  Knu  Wnd  Blk  Yoy  Crt  Bow  mLv  fJb
+JOB_VAGRANT              "Vagrant"     75.0  0.9  0.3  0.3  1.0  1.2  0.5  0.5  1.19 0.74  20  4.5  5.5  0.8  3.0  5.0  6.0  0.2  4.2  1.0  3.0  15   JOB_VAGRANT
+JOB_MERCENARY            "Mercenary"   80.0  1.5  0.5  0.7  1.35 1.6  0.5  1.0  1.54 0.74  26  4.5  5.5  0.8  3.0  5.0  6.0  0.8  4.2  1.0  3.0  60   JOB_VAGRANT
+JOB_ACROBAT              "Acrobat"     75.0  1.4  0.5  0.5  1.4  1.7  0.5  0.5  1.58 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.5  4.2  1.0  3.0  60   JOB_VAGRANT
+JOB_ASSIST               "Assist"      70.0  1.4  1.3  0.6  1.2  1.6  0.5  1.0  1.38 0.74  22  4.5  5.5  0.8  3.0  5.0  6.0  0.5  4.2  1.0  3.0  60   JOB_VAGRANT
+JOB_MAGICIAN             "Magician"    65.0  1.4  1.7  0.3  1.2  1.5  1.75 0.6  1.38 0.74  22  4.5  5.5  0.8  3.0  5.0  6.0  0.2  4.2  1.0  3.0  60   JOB_VAGRANT
+JOB_PUPPETEER            "Puppeteer"   75.0  1.6  0.5  0.5  1.2  1.2  0.5  0.5  1.38 0.74  22  4.5  5.5  0.8  3.0  5.0  6.0  0.2  4.2  1.0  3.0  60   JOB_VAGRANT
+JOB_KNIGHT               "Knight"      60.0  2.0  0.6  0.9  1.8  2.1  0.5  1.4  1.98 0.74  30  4.5  5.5  0.8  3.0  5.0  6.0  1.0  4.2  1.0  3.0  120  JOB_MERCENARY
+JOB_BLADE                "Blade"       90.0  1.6  0.6  0.8  1.5  1.7  0.5  1.2  1.68 0.74  26  4.5  5.5  0.8  3.0  5.0  6.0  1.5  4.2  1.0  3.0  120  JOB_MERCENARY
+JOB_JESTER               "Jester"      85.0  1.6  0.5  0.7  1.6  2.0  0.7  0.5  1.78 0.74  27  4.5  5.5  0.8  3.0  5.0  6.0  0.7  4.2  4.0  3.0  120  JOB_ACROBAT
+JOB_RANGER               "Ranger"      75.0  1.6  0.5  0.6  1.5  1.8  1.3  0.5  1.68 0.74  26  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  120  JOB_ACROBAT
+JOB_RINGMASTER           "Ringmaster"  70.0  1.6  1.8  0.4  1.2  2.3  1.9  1.1  1.39 0.74  22  4.5  5.5  0.8  3.0  5.0  6.0  0.6  4.2  1.0  3.0  120  JOB_ASSIST
+JOB_BILLPOSTER           "Billposter"  85.0  1.8  1.0  0.7  1.7  1.9  1.6  1.3  1.88 0.74  29  4.5  5.5  0.8  3.0  5.0  6.0  0.7  4.2  1.0  3.0  120  JOB_ASSIST
+JOB_PSYKEEPER            "Psykeeper"   70.0  1.5  2.0  0.4  1.3  1.2  1.9  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  120  JOB_MAGICIAN
+JOB_ELEMENTOR            "Elementor"   70.0  1.5  2.0  0.4  1.3  1.2  2.0  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  120  JOB_MAGICIAN
+JOB_GATEKEEPER           "Gatekeeper"  75.0  0.7  1.0  0.5  1.3  1.2  0.5  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.2  4.2  1.0  3.0  120  JOB_PUPPETEER
+JOB_DOPPLER              "Doppler"     75.0  0.7  0.5  0.5  1.3  1.2  0.5  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.2  4.2  1.0  3.0  120  JOB_PUPPETEER
+JOB_KNIGHT_MASTER        "Knight"      60.0  2.0  0.6  0.9  1.8  2.1  0.5  1.4  1.98 0.74  30  4.5  5.5  0.8  3.0  5.0  6.0  1.0  4.2  1.0  3.0  120  JOB_KNIGHT
+JOB_BLADE_MASTER         "Blade"       90.0  1.6  0.6  0.8  1.5  1.7  0.5  1.2  1.68 0.74  26  4.5  5.5  0.8  3.0  5.0  6.0  1.5  4.2  1.0  3.0  120  JOB_BLADE
+JOB_JESTER_MASTER        "Jester"      85.0  1.6  0.5  0.7  1.6  2.0  0.7  0.5  1.78 0.74  27  4.5  5.5  0.8  3.0  5.0  6.0  0.7  4.2  4.0  3.0  120  JOB_JESTER
+JOB_RANGER_MASTER        "Ranger"      75.0  1.6  0.5  0.6  1.5  1.8  1.3  0.5  1.68 0.74  26  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  120  JOB_RANGER
+JOB_RINGMASTER_MASTER    "Ringmaster"  70.0  1.6  1.8  0.4  1.2  2.3  1.9  1.1  1.39 0.74  22  4.5  5.5  0.8  3.0  5.0  6.0  0.6  4.2  1.0  3.0  120  JOB_RINGMASTER
+JOB_BILLPOSTER_MASTER    "Billposter"  85.0  1.8  1.0  0.7  1.7  1.9  1.6  1.3  1.88 0.74  29  4.5  5.5  0.8  3.0  5.0  6.0  0.7  4.2  1.0  3.0  120  JOB_BILLPOSTER
+JOB_PSYKEEPER_MASTER     "Psykeeper"   70.0  1.5  2.0  0.4  1.3  1.2  1.9  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  120  JOB_PSYCHIKEEPER
+JOB_ELEMENTOR_MASTER     "Elementor"   70.0  1.5  2.0  0.4  1.3  1.2  2.0  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  120  JOB_ELEMENTOR
+JOB_KNIGHT_HERO          "Knight"      60.0  2.0  0.6  0.9  1.8  2.1  0.5  1.4  1.98 0.74  30  4.5  5.5  0.8  3.0  5.0  6.0  1.0  4.2  1.0  3.0  121  JOB_KNIGHT_MASTER
+JOB_BLADE_HERO           "Blade"       90.0  1.6  0.6  0.8  1.5  1.7  0.5  1.2  1.68 0.74  26  4.5  5.5  0.8  3.0  5.0  6.0  1.5  4.2  1.0  3.0  121  JOB_BLADE_MASTER
+JOB_JESTER_HERO          "Jester"      85.0  1.6  0.5  0.7  1.6  2.0  0.7  0.5  1.78 0.74  27  4.5  5.5  0.8  3.0  5.0  6.0  0.7  4.2  4.0  3.0  121  JOB_JESTER_MASTER
+JOB_RANGER_HERO          "Ranger"      75.0  1.6  0.5  0.6  1.5  1.8  1.3  0.5  1.68 0.74  26  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  121  JOB_RANGER_MASTER
+JOB_RINGMASTER_HERO      "Ringmaster"  70.0  1.6  1.8  0.4  1.2  2.3  1.9  1.1  1.39 0.74  22  4.5  5.5  0.8  3.0  5.0  6.0  0.6  4.2  1.0  3.0  121  JOB_RINGMASTER_MASTER
+JOB_BILLPOSTER_HERO      "Billposter"  85.0  1.8  1.0  0.7  1.7  1.9  1.6  1.3  1.88 0.74  29  4.5  5.5  0.8  3.0  5.0  6.0  0.7  4.2  1.0  3.0  121  JOB_BILLPOSTER_MASTER
+JOB_PSYKEEPER_HERO       "Psykeeper"   70.0  1.5  2.0  0.4  1.3  1.2  1.9  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  121  JOB_PSYCHIKEEPER_MASTER
+JOB_ELEMENTOR_HERO       "Elementor"   70.0  1.5  2.0  0.4  1.3  1.2  2.0  0.5  1.48 0.74  24  4.5  5.5  0.8  3.0  5.0  6.0  0.3  4.2  1.0  3.0  121  JOB_ELEMENTOR_MASTER

@@ -1,0 +1,10 @@
+NAME "MaFl_Noier"
+MOVER 218
+
+POS 6703.29 135.965 3327.76
+WORLD 1
+ROTATION 900
+SIZE 100
+
+TEXT 20 "Das Wetter heute ist...
+Hmm.."

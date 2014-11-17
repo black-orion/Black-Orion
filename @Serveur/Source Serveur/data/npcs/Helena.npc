@@ -1,0 +1,15 @@
+NAME "MaSa_Helena"
+MOVER 212
+
+POS 8463.48 100 3600.76
+WORLD 1
+ROTATION 360
+SIZE 100
+
+PAGE 0
+	26456
+END
+
+TEXT 20 "Die Saint Morning Halle
+ist das beste Gebäude in
+Madrigal."

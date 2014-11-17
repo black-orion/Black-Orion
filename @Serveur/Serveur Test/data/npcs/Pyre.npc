@@ -1,0 +1,12 @@
+NAME "MaDa_Pyre"
+MOVER 218
+
+POS 3850.12 59 4425.96
+WORLD 1
+ROTATION 0
+SIZE 100
+
+DIALOG "MaDa_Pyre.as"
+
+TEXT 20 "Bonjour,je suis le maître des acrobates!
+Veux-tu devenir un acrobate?"

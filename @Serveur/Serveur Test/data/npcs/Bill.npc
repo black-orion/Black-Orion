@@ -1,0 +1,37 @@
+NAME "MaSa_Bill"
+MOVER 219
+
+POS 8410.16 100 3680.76
+WORLD 1
+ROTATION 630
+SIZE 100
+
+PAGE 0
+	2026
+	2027
+END
+
+PAGE 1
+	2530
+	2544
+	2531
+	2545
+	2532
+	2546
+	2533
+	2548
+	2534
+END
+
+PAGE 2
+	2028
+END
+
+PAGE 3
+	2893
+	2894
+END
+
+TEXT 20 "Alles, was du brauchst,
+bekommst du im Geschäft
+von Bill!"
