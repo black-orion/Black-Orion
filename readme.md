@@ -1,8 +1,15 @@
 Black - Orion
 =============
 
-A emulator for fly for fun, based form spheron.
+A emulator for fly for fun with some tools, based form spheron rev 6 .
 
+Language Used
+-------------
+
+Black-Orion - C++
+Loader Black-orion - C#
+Ultime Black Orion - C#
+Tools MJ - C#
 
 Pre-Request
 -----------
